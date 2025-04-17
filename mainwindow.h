@@ -22,6 +22,10 @@ private slots:
     void filterProcesses(const QString &text); // Новый слот для фильтрации
     void terminateProcess();
 
+    void on_updateButton_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model;

@@ -22,8 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     updateProcessList();
 
-    ui->filterLine->setPlaceholderText("Фильтр");
-
     connect(ui->filterLine, &QLineEdit::textChanged, this, &MainWindow::filterProcesses);
 
     // Подключаем сигнал нажатия кнопки к слоту завершения процесса
@@ -39,6 +37,12 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::updateProcessList() {
+
+    // Сохранение индекса + pid'а выделенной ячейки, чтобы выделение не слетело при обновлении таблицы
+    QModelIndex currentIndex = ui->tableView->currentIndex();
+    QString currentIndexPid = currentIndex.sibling(currentIndex.row(), 0).data().toString();
+
+
     vector<processInfo> vectorOfProcesses = getVectorOfProcesses();
 
     model->removeRows(0, model->rowCount()); // Очищаем модель перед обновлением
@@ -52,6 +56,15 @@ void MainWindow::updateProcessList() {
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getUmask()))); // Umask процесса
 
         model->appendRow(items);
+    }
+
+
+    // Поиск pid'а выделенной в прошлом ячейки и установка на неё выделения
+    for (int i = 0; i < proxyModel->rowCount(); ++i) {
+        QModelIndex index = proxyModel->index(i, 0);
+        if (proxyModel->data(index).toString() == currentIndexPid) {
+            ui->tableView->setCurrentIndex(index);
+        }
     }
 }
 
@@ -77,3 +90,15 @@ void MainWindow::terminateProcess() {
 
     updateProcessList();
 }
+
+void MainWindow::on_updateButton_clicked()
+{
+    updateProcessList();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->label->setText(ui->tableView->currentIndex().data().toString());
+}
+

@@ -13,3 +13,4 @@ ProcessRowWidget::ProcessRowWidget(int pid, QWidget *parent)
 void ProcessRowWidget::onTerminateButtonClicked() {
     emit terminateProcess(m_pid);
 }
+
