@@ -1,0 +1,9 @@
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/ProccessControlTool.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/edit_cache.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/rebuild_cache.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/list_install_components.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/install.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/install/local.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/install/strip.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/ProccessControlTool_autogen_timestamp_deps.dir
+/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/ProccessControlTool_autogen.dir

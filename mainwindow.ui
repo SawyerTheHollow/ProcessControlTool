@@ -26,12 +26,21 @@
       </item>
       <item>
        <widget class="QTableView" name="tableView">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+        </property>
         <property name="gridStyle">
          <enum>Qt::PenStyle::SolidLine</enum>
         </property>
         <property name="sortingEnabled">
          <bool>true</bool>
         </property>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
        </widget>
       </item>
      </layout>
@@ -45,28 +54,7 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="updateButton">
-        <property name="text">
-         <string>Обновить информацию</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Вывести хуню по индексу</string>
-        </property>
-       </widget>
-      </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>asd</string>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>

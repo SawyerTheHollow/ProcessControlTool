@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QProcess>
 #include <QTimer>
+#include <QScrollBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -57,8 +58,8 @@ void MainWindow::updateProcessList() {
 
         model->appendRow(items);
     }
-
-
+    // Костыль для сохранения позиции скролла перед участком кода ниже, который возвращал позицию скролла на выделенный элемент
+    int scrollPos = ui->tableView->verticalScrollBar()->value();
     // Поиск pid'а выделенной в прошлом ячейки и установка на неё выделения
     for (int i = 0; i < proxyModel->rowCount(); ++i) {
         QModelIndex index = proxyModel->index(i, 0);
@@ -66,6 +67,8 @@ void MainWindow::updateProcessList() {
             ui->tableView->setCurrentIndex(index);
         }
     }
+    // Восстановление позиции скролла
+    ui->tableView->verticalScrollBar()->setValue(scrollPos);
 }
 
 void MainWindow::filterProcesses(const QString &text) {
@@ -91,14 +94,4 @@ void MainWindow::terminateProcess() {
     updateProcessList();
 }
 
-void MainWindow::on_updateButton_clicked()
-{
-    updateProcessList();
-}
-
-
-void MainWindow::on_pushButton_clicked()
-{
-    ui->label->setText(ui->tableView->currentIndex().data().toString());
-}
 

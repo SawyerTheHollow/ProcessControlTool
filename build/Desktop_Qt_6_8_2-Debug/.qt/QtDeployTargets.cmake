@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_ProccessControlTool_FILE /home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool)
+set(__QT_DEPLOY_TARGET_ProccessControlTool_TYPE EXECUTABLE)

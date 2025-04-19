@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -35,9 +34,6 @@ public:
     QTableView *tableView;
     QHBoxLayout *horizontalLayout;
     QPushButton *terminateButton;
-    QPushButton *updateButton;
-    QPushButton *pushButton;
-    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -59,8 +55,11 @@ public:
 
         tableView = new QTableView(centralwidget);
         tableView->setObjectName("tableView");
+        tableView->setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
+        tableView->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
         tableView->setGridStyle(Qt::PenStyle::SolidLine);
         tableView->setSortingEnabled(true);
+        tableView->verticalHeader()->setVisible(false);
 
         verticalLayout->addWidget(tableView);
 
@@ -74,23 +73,8 @@ public:
 
         horizontalLayout->addWidget(terminateButton);
 
-        updateButton = new QPushButton(centralwidget);
-        updateButton->setObjectName("updateButton");
-
-        horizontalLayout->addWidget(updateButton);
-
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-
-        horizontalLayout->addWidget(pushButton);
-
 
         verticalLayout_2->addLayout(horizontalLayout);
-
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
-
-        verticalLayout_2->addWidget(label);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -111,9 +95,6 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         filterLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\244\320\270\320\273\321\214\321\202\321\200", nullptr));
         terminateButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\262\320\265\321\200\321\210\320\270\321\202\321\214 \320\277\321\200\320\276\321\206\320\265\321\201\321\201", nullptr));
-        updateButton->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214 \320\270\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\216", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\320\262\320\265\321\201\321\202\320\270 \321\205\321\203\320\275\321\216 \320\277\320\276 \320\270\320\275\320\264\320\265\320\272\321\201\321\203", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "asd", nullptr));
     } // retranslateUi
 
 };
