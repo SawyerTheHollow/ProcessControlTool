@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -33,7 +34,9 @@ public:
     QLineEdit *filterLine;
     QTableView *tableView;
     QHBoxLayout *horizontalLayout;
+    QPushButton *pauseStartButton;
     QPushButton *terminateButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -63,18 +66,45 @@ public:
 
         verticalLayout->addWidget(tableView);
 
-
-        verticalLayout_2->addLayout(verticalLayout);
-
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
+        pauseStartButton = new QPushButton(centralwidget);
+        pauseStartButton->setObjectName("pauseStartButton");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pauseStartButton->sizePolicy().hasHeightForWidth());
+        pauseStartButton->setSizePolicy(sizePolicy);
+        pauseStartButton->setMinimumSize(QSize(25, 0));
+        pauseStartButton->setMaximumSize(QSize(50, 16777215));
+        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::MediaPlaybackPause));
+        pauseStartButton->setIcon(icon);
+        pauseStartButton->setCheckable(true);
+
+        horizontalLayout->addWidget(pauseStartButton);
+
         terminateButton = new QPushButton(centralwidget);
         terminateButton->setObjectName("terminateButton");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(255);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(terminateButton->sizePolicy().hasHeightForWidth());
+        terminateButton->setSizePolicy(sizePolicy1);
 
         horizontalLayout->addWidget(terminateButton);
 
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setMinimumSize(QSize(25, 0));
+        pushButton_2->setMaximumSize(QSize(25, 16777215));
 
-        verticalLayout_2->addLayout(horizontalLayout);
+        horizontalLayout->addWidget(pushButton_2);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -94,7 +124,12 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         filterLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\244\320\270\320\273\321\214\321\202\321\200", nullptr));
+        pauseStartButton->setText(QString());
         terminateButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\262\320\265\321\200\321\210\320\270\321\202\321\214 \320\277\321\200\320\276\321\206\320\265\321\201\321\201", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_2->setToolTip(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
     } // retranslateUi
 
 };

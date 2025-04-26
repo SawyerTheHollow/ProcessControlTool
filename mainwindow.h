@@ -21,6 +21,7 @@ private slots:
     void updateProcessList();
     void filterProcesses(const QString &text); // Новый слот для фильтрации
     void terminateProcess();
+    void on_pauseStartButton_clicked();
 
 private:
     Ui::MainWindow *ui;

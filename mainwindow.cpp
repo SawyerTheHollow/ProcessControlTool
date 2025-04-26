@@ -165,3 +165,16 @@ void MainWindow::terminateProcess() {
 }
 
 
+void MainWindow::on_pauseStartButton_clicked()
+{
+    if(ui->pauseStartButton->isChecked()){
+        ui->pauseStartButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_MediaPause));
+        timer->start(1000);
+    }
+
+    else {
+        ui->pauseStartButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_MediaPlay));
+        timer->stop();
+    }
+}
+
