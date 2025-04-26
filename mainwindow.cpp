@@ -123,7 +123,8 @@ void MainWindow::updateProcessList() {
 
         model->appendRow(items);
     }
-    // Костыль для сохранения позиции скролла перед участком кода ниже, который возвращал позицию скролла на выделенный элемент
+    // Костыль для сохранения позиции скролла перед участком кода ниже
+    // Из-за участка кода ниже позиция скролла после обновления информации в таблице принудительно прескакивала на выделенный элемент
     int verticalScrollPos = ui->tableView->verticalScrollBar()->value();
     int horizontalScrollPos = ui->tableView->horizontalScrollBar()->value();
 
@@ -153,9 +154,9 @@ void MainWindow::terminateProcess() {
         return;
     }
 
-    int pid = model->item(currentIndex.row(), 0)->text().toInt();
+    QString pid = proxyModel->data(currentIndex).toString();
 
-    if (QProcess::execute("kill", QStringList() << QString::number(pid)) != 0) {
+    if (QProcess::execute("kill", QStringList() << pid) != 0) {
         QMessageBox::warning(this, "Ошибка", "Не удалось завершить процесс.");
         return;
     }
