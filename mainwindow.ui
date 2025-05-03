@@ -26,11 +26,17 @@
       </item>
       <item>
        <widget class="QTableView" name="tableView">
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
         <property name="selectionMode">
          <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
         </property>
         <property name="selectionBehavior">
          <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+        </property>
+        <property name="horizontalScrollMode">
+         <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
         </property>
         <property name="gridStyle">
          <enum>Qt::PenStyle::SolidLine</enum>
@@ -38,6 +44,9 @@
         <property name="sortingEnabled">
          <bool>true</bool>
         </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
         <attribute name="verticalHeaderVisible">
          <bool>false</bool>
         </attribute>
@@ -90,7 +99,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="signalWindowButton">
           <property name="minimumSize">
            <size>
             <width>25</width>
@@ -116,16 +125,6 @@
      </layout>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>23</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

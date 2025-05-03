@@ -433,9 +433,9 @@
 			null
 		],
 		[
-			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/processrowwidget.h",
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/signalwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_processrowwidget.cpp",
+			"EWIEGA46WW/moc_signalwindow.cpp",
 			null
 		]
 	],
@@ -514,7 +514,7 @@
 			null
 		],
 		[
-			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/processrowwidget.cpp",
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/signalwindow.cpp",
 			"MU",
 			null
 		]

@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <vector>
 #include "processInfo.h"
+#include "signalwindow.h"
 #include <QRegularExpression>
 #include <QMessageBox>
 #include <QProcess>
@@ -21,7 +22,11 @@ MainWindow::MainWindow(QWidget *parent)
                                                    << "VmExe" << "VmLib" << "VmPTE" << "VmSwap" << "HugetlbPages" << "CoreDumping" << "THP_enabled" << "untag_mask" << "Threads" << "SigQ" << "SigPnd" << "ShdPnd"
                                                    << "SigBlk" << "SigIgn" << "SigCgt" << "CapInh" << "CapPrm" << "CapEff" << "CapBnd" << "CapAmb" << "NoNewPrivs" << "Seccomp" << "Seccomp_filters"
                                                    << "Speculation_Store_Bypass" << "SpeculationIndirectBranch" << "Cpus_allowed" << "Cpus_allowed_list" << "Mems_allowed" << "Mems_allowed_list"
-                                                   << "voluntary_ctxt_switches" << "nonvoluntary_ctxt_switches" << "x86_Thread_features" << "x86_Thread_features_locked");
+                                                   << "voluntary_ctxt_switches" << "nonvoluntary_ctxt_switches" << "x86_Thread_features" << "x86_Thread_features_locked" << "pgrp" << "session" << "tty_nr"
+                                                   << "tpgid" << "flags" << "minflt" << "cminflt" << "majflt" << "cmajflt" << "utime" << "stime" << "cutime" << "cstime" << "priority" << "nice" << "num_threads"
+                                                   << "itrealvalue" << "starttime" << "vsize" << "rss" << "rsslim" << "startcode" << "endcode" << "startstack" << "kstkesp" << "kstkeip" << "signal" << "blocked"
+                                                   << "sigignore" << "sigcatch" << "wchan" << "nswap" << "cnswap" << "exit_signal" << "processor" << "rt_priority" << "policy" << "delayacct_blkio_ticks"
+                                                   << "guest_time" << "cguest_time" << "start_data" << "end_data" << "start_brk" << "arg_start" << "arg_end" << "env_start" << "env_end" << "exit_code");
 
     proxyModel->setSourceModel(model);
     ui->tableView->setModel(proxyModel);
@@ -37,12 +42,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timer, &QTimer::timeout, this, &MainWindow::updateProcessList);
     timer->start(1000);
 
+    ui->tableView->resizeColumnsToContents();
     //ui->tableView->setColumnHidden(1, 1);
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
+
 
 void MainWindow::updateProcessList() {
 
@@ -57,6 +64,7 @@ void MainWindow::updateProcessList() {
 
     for (int i = 0; i < vectorOfProcesses.size(); i++) {
         QList<QStandardItem *> items;
+
         items.append(new QStandardItem(QString::number(vectorOfProcesses[i].processInfo::getPid()))); // pid процесса
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getName()))); // Name процесса
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getUmask()))); // Umask процесса
@@ -119,7 +127,54 @@ void MainWindow::updateProcessList() {
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getx86_Thread_features()))); // x86_Thread_features процесса
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getx86_Thread_features_locked()))); // x86_Thread_features_locked процесса
 
-
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getpgrp())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getsession())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::gettty_nr())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::gettpgid())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getflags())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getminflt())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcminflt())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getmajflt())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcmajflt())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getutime())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstime())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcutime())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcstime())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getpriority())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getnice())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getnum_threads())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getitrealvalue())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstarttime())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getvsize())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getrss())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getrsslim())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstartcode())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getendcode())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstartstack())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getkstkesp())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getkstkeip())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getsignal())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getblocked())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getsigignore())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getsigcatch())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getwchan())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getnswap())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcnswap())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getexit_signal())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getprocessor())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getrt_priority())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getpolicy())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getdelayacct_blkio_ticks())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getguest_time())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getcguest_time())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstart_data())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getend_data())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getstart_brk())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getarg_start())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getarg_end())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getenv_start())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getenv_end())));
+        items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getexit_code())));
 
         model->appendRow(items);
     }
@@ -141,16 +196,18 @@ void MainWindow::updateProcessList() {
     ui->tableView->horizontalScrollBar()->setValue(horizontalScrollPos);
 }
 
+
 void MainWindow::filterProcesses(const QString &text) {
     QRegularExpression regex(text, QRegularExpression::CaseInsensitiveOption);
     proxyModel->setFilterRegularExpression(regex);
 }
 
+
 void MainWindow::terminateProcess() {
     QModelIndex currentIndex = ui->tableView->currentIndex();
 
     if (!currentIndex.isValid()) {
-        QMessageBox::warning(this, "Ошибка", "Пожалуйста, выберите процесс для завершения.");
+        QMessageBox::warning(this, "pid отсутствует", "Необходимо выбрать процесс из списка.");
         return;
     }
 
@@ -176,5 +233,22 @@ void MainWindow::on_pauseStartButton_clicked()
         ui->pauseStartButton->setIcon(QApplication::style()->standardIcon(QStyle::SP_MediaPlay));
         timer->stop();
     }
+}
+
+
+void MainWindow::on_signalWindowButton_clicked()
+{
+    QModelIndex currentIndex = ui->tableView->currentIndex();
+    QModelIndex NameIndex = currentIndex.sibling(currentIndex.row(), currentIndex.column() + 1);
+
+    if (!currentIndex.isValid()) {
+        QMessageBox::warning(this, "pid отсутствует", "Необходимо выбрать процесс из списка.");
+        return;
+    }
+
+    QString pid = proxyModel->data(currentIndex).toString();
+    QString Name = proxyModel->data(NameIndex).toString();
+    signalwindow signalwindow(pid, Name);
+    signalwindow.exec();
 }
 

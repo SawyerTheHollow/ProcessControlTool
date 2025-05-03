@@ -6,6 +6,7 @@
 #include <QSortFilterProxyModel>
 #include "filter.h"
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,11 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private slots:
     void updateProcessList();
     void filterProcesses(const QString &text); // Новый слот для фильтрации
     void terminateProcess();
     void on_pauseStartButton_clicked();
+    void on_signalWindowButton_clicked();
 
 private:
     Ui::MainWindow *ui;

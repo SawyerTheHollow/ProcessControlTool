@@ -16,7 +16,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
@@ -36,8 +35,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *pauseStartButton;
     QPushButton *terminateButton;
-    QPushButton *pushButton_2;
-    QMenuBar *menubar;
+    QPushButton *signalWindowButton;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -58,10 +56,13 @@ public:
 
         tableView = new QTableView(centralwidget);
         tableView->setObjectName("tableView");
+        tableView->setLineWidth(1);
         tableView->setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
         tableView->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
+        tableView->setHorizontalScrollMode(QAbstractItemView::ScrollMode::ScrollPerPixel);
         tableView->setGridStyle(Qt::PenStyle::SolidLine);
         tableView->setSortingEnabled(true);
+        tableView->horizontalHeader()->setCascadingSectionResizes(false);
         tableView->verticalHeader()->setVisible(false);
 
         verticalLayout->addWidget(tableView);
@@ -93,12 +94,12 @@ public:
 
         horizontalLayout->addWidget(terminateButton);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMinimumSize(QSize(25, 0));
-        pushButton_2->setMaximumSize(QSize(25, 16777215));
+        signalWindowButton = new QPushButton(centralwidget);
+        signalWindowButton->setObjectName("signalWindowButton");
+        signalWindowButton->setMinimumSize(QSize(25, 0));
+        signalWindowButton->setMaximumSize(QSize(25, 16777215));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(signalWindowButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -107,10 +108,6 @@ public:
         verticalLayout_2->addLayout(verticalLayout);
 
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 23));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
@@ -127,9 +124,9 @@ public:
         pauseStartButton->setText(QString());
         terminateButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\262\320\265\321\200\321\210\320\270\321\202\321\214 \320\277\321\200\320\276\321\206\320\265\321\201\321\201", nullptr));
 #if QT_CONFIG(tooltip)
-        pushButton_2->setToolTip(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));
+        signalWindowButton->setToolTip(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));
 #endif // QT_CONFIG(tooltip)
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        signalWindowButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
     } // retranslateUi
 
 };

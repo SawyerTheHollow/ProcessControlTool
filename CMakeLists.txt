@@ -26,7 +26,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         processInfo.h
         processInfo.cpp
         filter.h
-        processrowwidget.h processrowwidget.cpp
+        signalwindow.h signalwindow.cpp signalwindow.ui
+
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -3,7 +3,6 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <regex>
 #include <QDebug>
 
 #include "processInfo.h"
