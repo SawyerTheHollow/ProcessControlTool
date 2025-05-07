@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>240</width>
-    <height>320</height>
+    <height>160</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -88,6 +88,9 @@
    </item>
    <item>
     <widget class="QComboBox" name="signalwindow_signalComboBox">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <property name="placeholderText">
       <string>Сигнал</string>
      </property>
@@ -197,19 +200,6 @@
       </property>
      </item>
     </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">

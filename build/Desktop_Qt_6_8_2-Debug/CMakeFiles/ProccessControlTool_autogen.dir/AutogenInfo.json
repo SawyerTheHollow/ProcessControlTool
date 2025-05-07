@@ -415,6 +415,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/columnvisibilitywindow.h",
+			"MU",
+			"EWIEGA46WW/moc_columnvisibilitywindow.cpp",
+			null
+		],
+		[
 			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/filter.h",
 			"MU",
 			"EWIEGA46WW/moc_filter.cpp",
@@ -498,6 +504,11 @@
 	"SETTINGS_FILE" : "/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/ProccessControlTool_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/main.cpp",
 			"MU",

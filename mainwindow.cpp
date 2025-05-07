@@ -8,6 +8,12 @@
 #include <QProcess>
 #include <QTimer>
 #include <QScrollBar>
+#include <QSettings>
+
+
+#include <QDebug>
+#include "columnvisibilitywindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +23,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
-    model->setHorizontalHeaderLabels(QStringList() << "pid" << "Name" << "Umask" << "State" << "PPid"  << "Tgid" << "Ngid" << "TracerPid" << "Uid" << "Gid" << "FDSize" << "Groups" << "NStgid" << "NSpid" << "NSpgid"
+    //connect(columnvisibilitywindow::columnvisibilitywindow);
+
+    model->setHorizontalHeaderLabels(QStringList() << "Pid" << "Name" << "Umask" << "State" << "PPid"  << "Tgid" << "Ngid" << "TracerPid" << "Uid" << "Gid" << "FDSize" << "Groups" << "NStgid" << "NSpid" << "NSpgid"
                                                    << "NSsid" << "Kthread" << "VmPeak" << "VmSize" << "VmLck" << "VmPin" << "VmHWM" << "VmRSS" << "RssAnon" << "RssFile" << "RssShmem" << "VmData" << "VmStk"
                                                    << "VmExe" << "VmLib" << "VmPTE" << "VmSwap" << "HugetlbPages" << "CoreDumping" << "THP_enabled" << "untag_mask" << "Threads" << "SigQ" << "SigPnd" << "ShdPnd"
                                                    << "SigBlk" << "SigIgn" << "SigCgt" << "CapInh" << "CapPrm" << "CapEff" << "CapBnd" << "CapAmb" << "NoNewPrivs" << "Seccomp" << "Seccomp_filters"
@@ -43,8 +51,9 @@ MainWindow::MainWindow(QWidget *parent)
     timer->start(1000);
 
     ui->tableView->resizeColumnsToContents();
-    //ui->tableView->setColumnHidden(1, 1);
+    loadColumnVisibility();
 }
+
 
 MainWindow::~MainWindow() {
     delete ui;
@@ -250,5 +259,129 @@ void MainWindow::on_signalWindowButton_clicked()
     QString Name = proxyModel->data(NameIndex).toString();
     signalwindow signalwindow(pid, Name);
     signalwindow.exec();
+}
+
+
+
+void MainWindow::on_columnVisibilityWindowButton_clicked()
+{
+    columnvisibilitywindow cvw;
+    connect(&cvw, &columnvisibilitywindow::columnVisibilityWindowClosedSignal, this, &MainWindow::loadColumnVisibility);
+
+    cvw.exec();
+}
+
+void MainWindow::loadColumnVisibility()
+{
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope, "Sawyer", "ProcessControlTool");
+    ui->tableView->setColumnHidden(0, !settings.value("PidCheckBox").toBool());
+    ui->tableView->setColumnHidden(1, !settings.value("NameCheckBox").toBool());
+    ui->tableView->setColumnHidden(2, !settings.value("UmaskCheckBox").toBool());
+    ui->tableView->setColumnHidden(3, !settings.value("StateCheckBox").toBool());
+    ui->tableView->setColumnHidden(4, !settings.value("PPidCheckBox").toBool());
+    ui->tableView->setColumnHidden(5, !settings.value("TgidCheckBox").toBool());
+    ui->tableView->setColumnHidden(6, !settings.value("NgidCheckBox").toBool());
+    ui->tableView->setColumnHidden(7, !settings.value("TracerPidCheckBox").toBool());
+    ui->tableView->setColumnHidden(8, !settings.value("UidCheckBox").toBool());
+    ui->tableView->setColumnHidden(9, !settings.value("GidCheckBox").toBool());
+    ui->tableView->setColumnHidden(10, !settings.value("FDSizeCheckBox").toBool());
+    ui->tableView->setColumnHidden(11, !settings.value("GroupsCheckBox").toBool());
+    ui->tableView->setColumnHidden(12, !settings.value("NStgidCheckBox").toBool());
+    ui->tableView->setColumnHidden(13, !settings.value("NSpidCheckBox").toBool());
+    ui->tableView->setColumnHidden(14, !settings.value("NSpgidCheckBox").toBool());
+    ui->tableView->setColumnHidden(15, !settings.value("NSsidCheckBox").toBool());
+    ui->tableView->setColumnHidden(16, !settings.value("KthreadCheckBox").toBool());
+    ui->tableView->setColumnHidden(17, !settings.value("VmPeakCheckBox").toBool());
+    ui->tableView->setColumnHidden(18, !settings.value("VmSizeCheckBox").toBool());
+    ui->tableView->setColumnHidden(19, !settings.value("VmLckCheckBox").toBool());
+    ui->tableView->setColumnHidden(20, !settings.value("VmPinCheckBox").toBool());
+    ui->tableView->setColumnHidden(21, !settings.value("VmHWMCheckBox").toBool());
+    ui->tableView->setColumnHidden(22, !settings.value("VmRSSCheckBox").toBool());
+    ui->tableView->setColumnHidden(23, !settings.value("RssAnonCheckBox").toBool());
+    ui->tableView->setColumnHidden(24, !settings.value("RssFileCheckBox").toBool());
+    ui->tableView->setColumnHidden(25, !settings.value("RssShmemCheckBox").toBool());
+    ui->tableView->setColumnHidden(26, !settings.value("VmDataCheckBox").toBool());
+    ui->tableView->setColumnHidden(27, !settings.value("VmStkCheckBox").toBool());
+    ui->tableView->setColumnHidden(28, !settings.value("VmExeCheckBox").toBool());
+    ui->tableView->setColumnHidden(29, !settings.value("VmLibCheckBox").toBool());
+    ui->tableView->setColumnHidden(30, !settings.value("VmPTECheckBox").toBool());
+    ui->tableView->setColumnHidden(31, !settings.value("VmSwapCheckBox").toBool());
+    ui->tableView->setColumnHidden(32, !settings.value("HugetlbPagesCheckBox").toBool());
+    ui->tableView->setColumnHidden(33, !settings.value("CoreDumpingCheckBox").toBool());
+    ui->tableView->setColumnHidden(34, !settings.value("THP_enabledCheckBox").toBool());
+    ui->tableView->setColumnHidden(35, !settings.value("untag_maskCheckBox").toBool());
+    ui->tableView->setColumnHidden(36, !settings.value("ThreadsCheckBox").toBool());
+    ui->tableView->setColumnHidden(37, !settings.value("SigQCheckBox").toBool());
+    ui->tableView->setColumnHidden(38, !settings.value("SigPndCheckBox").toBool());
+    ui->tableView->setColumnHidden(39, !settings.value("ShdPndCheckBox").toBool());
+    ui->tableView->setColumnHidden(40, !settings.value("SigBlkCheckBox").toBool());
+    ui->tableView->setColumnHidden(41, !settings.value("SigIgnCheckBox").toBool());
+    ui->tableView->setColumnHidden(42, !settings.value("SigCgtCheckBox").toBool());
+    ui->tableView->setColumnHidden(43, !settings.value("CapInhCheckBox").toBool());
+    ui->tableView->setColumnHidden(44, !settings.value("CapPrmCheckBox").toBool());
+    ui->tableView->setColumnHidden(45, !settings.value("CapEffCheckBox").toBool());
+    ui->tableView->setColumnHidden(46, !settings.value("CapBndCheckBox").toBool());
+    ui->tableView->setColumnHidden(47, !settings.value("CapAmbCheckBox").toBool());
+    ui->tableView->setColumnHidden(48, !settings.value("NoNewPrivsCheckBox").toBool());
+    ui->tableView->setColumnHidden(49, !settings.value("SeccompCheckBox").toBool());
+    ui->tableView->setColumnHidden(50, !settings.value("Seccomp_filtersCheckBox").toBool());
+    ui->tableView->setColumnHidden(51, !settings.value("Speculation_Store_BypassCheckBox").toBool());
+    ui->tableView->setColumnHidden(52, !settings.value("SpeculationIndirectBranchCheckBox").toBool());
+    ui->tableView->setColumnHidden(53, !settings.value("Cpus_allowedCheckBox").toBool());
+    ui->tableView->setColumnHidden(54, !settings.value("Cpus_allowed_listCheckBox").toBool());
+    ui->tableView->setColumnHidden(55, !settings.value("Mems_allowedCheckBox").toBool());
+    ui->tableView->setColumnHidden(56, !settings.value("Mems_allowed_listCheckBox").toBool());
+    ui->tableView->setColumnHidden(57, !settings.value("voluntary_ctxt_switchesCheckBox").toBool());
+    ui->tableView->setColumnHidden(58, !settings.value("nonvoluntary_ctxt_switchesCheckBox").toBool());
+    ui->tableView->setColumnHidden(59, !settings.value("x86_Thread_featuresCheckBox").toBool());
+    ui->tableView->setColumnHidden(60, !settings.value("x86_Thread_features_lockedCheckBox").toBool());
+    ui->tableView->setColumnHidden(61, !settings.value("pgrpCheckBox").toBool());
+    ui->tableView->setColumnHidden(62, !settings.value("sessionCheckBox").toBool());
+    ui->tableView->setColumnHidden(63, !settings.value("tty_nrCheckBox").toBool());
+    ui->tableView->setColumnHidden(64, !settings.value("tpgidCheckBox").toBool());
+    ui->tableView->setColumnHidden(65, !settings.value("flagsCheckBox").toBool());
+    ui->tableView->setColumnHidden(66, !settings.value("minfltCheckBox").toBool());
+    ui->tableView->setColumnHidden(67, !settings.value("cminfltCheckBox").toBool());
+    ui->tableView->setColumnHidden(68, !settings.value("majfltCheckBox").toBool());
+    ui->tableView->setColumnHidden(69, !settings.value("cmajfltCheckBox").toBool());
+    ui->tableView->setColumnHidden(70, !settings.value("utimeCheckBox").toBool());
+    ui->tableView->setColumnHidden(71, !settings.value("stimeCheckBox").toBool());
+    ui->tableView->setColumnHidden(72, !settings.value("cutimeCheckBox").toBool());
+    ui->tableView->setColumnHidden(73, !settings.value("cstimeCheckBox").toBool());
+    ui->tableView->setColumnHidden(74, !settings.value("priorityCheckBox").toBool());
+    ui->tableView->setColumnHidden(75, !settings.value("niceCheckBox").toBool());
+    ui->tableView->setColumnHidden(76, !settings.value("num_threadsCheckBox").toBool());
+    ui->tableView->setColumnHidden(77, !settings.value("itrealvalueCheckBox").toBool());
+    ui->tableView->setColumnHidden(78, !settings.value("starttimeCheckBox").toBool());
+    ui->tableView->setColumnHidden(79, !settings.value("vsizeCheckBox").toBool());
+    ui->tableView->setColumnHidden(80, !settings.value("rssCheckBox").toBool());
+    ui->tableView->setColumnHidden(81, !settings.value("rsslimCheckBox").toBool());
+    ui->tableView->setColumnHidden(82, !settings.value("startcodeCheckBox").toBool());
+    ui->tableView->setColumnHidden(83, !settings.value("endcodeCheckBox").toBool());
+    ui->tableView->setColumnHidden(84, !settings.value("startstackCheckBox").toBool());
+    ui->tableView->setColumnHidden(85, !settings.value("kstkespCheckBox").toBool());
+    ui->tableView->setColumnHidden(86, !settings.value("kstkeipCheckBox").toBool());
+    ui->tableView->setColumnHidden(87, !settings.value("signalCheckBox").toBool());
+    ui->tableView->setColumnHidden(88, !settings.value("blockedCheckBox").toBool());
+    ui->tableView->setColumnHidden(89, !settings.value("sigignoreCheckBox").toBool());
+    ui->tableView->setColumnHidden(90, !settings.value("sigcatchCheckBox").toBool());
+    ui->tableView->setColumnHidden(91, !settings.value("wchanCheckBox").toBool());
+    ui->tableView->setColumnHidden(92, !settings.value("nswapCheckBox").toBool());
+    ui->tableView->setColumnHidden(93, !settings.value("cnswapCheckBox").toBool());
+    ui->tableView->setColumnHidden(94, !settings.value("exit_signalCheckBox").toBool());
+    ui->tableView->setColumnHidden(95, !settings.value("processorCheckBox").toBool());
+    ui->tableView->setColumnHidden(96, !settings.value("rt_priorityCheckBox").toBool());
+    ui->tableView->setColumnHidden(97, !settings.value("policyCheckBox").toBool());
+    ui->tableView->setColumnHidden(98, !settings.value("delayacct_blkio_ticksCheckBox").toBool());
+    ui->tableView->setColumnHidden(99, !settings.value("guest_timeCheckBox").toBool());
+    ui->tableView->setColumnHidden(100, !settings.value("cguest_timeCheckBox").toBool());
+    ui->tableView->setColumnHidden(101, !settings.value("start_dataCheckBox").toBool());
+    ui->tableView->setColumnHidden(102, !settings.value("end_dataCheckBox").toBool());
+    ui->tableView->setColumnHidden(103, !settings.value("start_brkCheckBox").toBool());
+    ui->tableView->setColumnHidden(104, !settings.value("arg_startCheckBox").toBool());
+    ui->tableView->setColumnHidden(105, !settings.value("arg_endCheckBox").toBool());
+    ui->tableView->setColumnHidden(106, !settings.value("env_startCheckBox").toBool());
+    ui->tableView->setColumnHidden(107, !settings.value("env_endCheckBox").toBool());
+    ui->tableView->setColumnHidden(108, !settings.value("exit_codeCheckBox").toBool());
 }
 

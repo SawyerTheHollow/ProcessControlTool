@@ -19,12 +19,18 @@ public:
     ~MainWindow();
 
 
+public slots:
+
+    void loadColumnVisibility();
+
 private slots:
     void updateProcessList();
     void filterProcesses(const QString &text); // Новый слот для фильтрации
     void terminateProcess();
     void on_pauseStartButton_clicked();
     void on_signalWindowButton_clicked();
+    void on_columnVisibilityWindowButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;

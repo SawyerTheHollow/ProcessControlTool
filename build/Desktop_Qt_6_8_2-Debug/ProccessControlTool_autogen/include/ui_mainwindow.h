@@ -28,9 +28,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QLineEdit *filterLine;
+    QPushButton *columnVisibilityWindowButton;
     QTableView *tableView;
     QHBoxLayout *horizontalLayout;
     QPushButton *pauseStartButton;
@@ -45,14 +46,22 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        verticalLayout_2 = new QVBoxLayout(centralwidget);
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout = new QVBoxLayout();
+        verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
         filterLine = new QLineEdit(centralwidget);
         filterLine->setObjectName("filterLine");
 
-        verticalLayout->addWidget(filterLine);
+        horizontalLayout_2->addWidget(filterLine);
+
+        columnVisibilityWindowButton = new QPushButton(centralwidget);
+        columnVisibilityWindowButton->setObjectName("columnVisibilityWindowButton");
+
+        horizontalLayout_2->addWidget(columnVisibilityWindowButton);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
         tableView = new QTableView(centralwidget);
         tableView->setObjectName("tableView");
@@ -97,15 +106,12 @@ public:
         signalWindowButton = new QPushButton(centralwidget);
         signalWindowButton->setObjectName("signalWindowButton");
         signalWindowButton->setMinimumSize(QSize(25, 0));
-        signalWindowButton->setMaximumSize(QSize(25, 16777215));
+        signalWindowButton->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout->addWidget(signalWindowButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
-
-
-        verticalLayout_2->addLayout(verticalLayout);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -121,12 +127,13 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         filterLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\244\320\270\320\273\321\214\321\202\321\200", nullptr));
+        columnVisibilityWindowButton->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\273\320\276\320\275\320\272\320\270", nullptr));
         pauseStartButton->setText(QString());
         terminateButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\262\320\265\321\200\321\210\320\270\321\202\321\214 \320\277\321\200\320\276\321\206\320\265\321\201\321\201", nullptr));
 #if QT_CONFIG(tooltip)
         signalWindowButton->setToolTip(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));
 #endif // QT_CONFIG(tooltip)
-        signalWindowButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        signalWindowButton->setText(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));
     } // retranslateUi
 
 };

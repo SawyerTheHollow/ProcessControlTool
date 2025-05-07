@@ -17,7 +17,6 @@
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -33,14 +32,13 @@ public:
     QLabel *signalwindow_Namelabel;
     QLabel *signalwindow_Name;
     QComboBox *signalwindow_signalComboBox;
-    QSpacerItem *verticalSpacer;
     QDialogButtonBox *buttonBox;
 
     void setupUi(QDialog *signalwindow)
     {
         if (signalwindow->objectName().isEmpty())
             signalwindow->setObjectName("signalwindow");
-        signalwindow->resize(240, 320);
+        signalwindow->resize(240, 160);
         verticalLayout = new QVBoxLayout(signalwindow);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
@@ -105,10 +103,6 @@ public:
 
         verticalLayout->addWidget(signalwindow_signalComboBox);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         buttonBox = new QDialogButtonBox(signalwindow);
         buttonBox->setObjectName("buttonBox");
         buttonBox->setOrientation(Qt::Orientation::Horizontal);
@@ -121,6 +115,9 @@ public:
         retranslateUi(signalwindow);
         QObject::connect(buttonBox, &QDialogButtonBox::accepted, signalwindow, qOverload<>(&QDialog::accept));
         QObject::connect(buttonBox, &QDialogButtonBox::rejected, signalwindow, qOverload<>(&QDialog::reject));
+
+        signalwindow_signalComboBox->setCurrentIndex(0);
+
 
         QMetaObject::connectSlotsByName(signalwindow);
     } // setupUi

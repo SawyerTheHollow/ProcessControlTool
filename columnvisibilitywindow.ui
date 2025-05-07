@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>columnvisibilitywindow</class>
+ <widget class="QDialog" name="columnvisibilitywindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>772</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QCheckBox" name="PidcheckBox">
+         <property name="text">
+          <string>Pid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="TgidcheckBox">
+         <property name="text">
+          <string>Tgid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="FDSizecheckBox">
+         <property name="text">
+          <string>FDSize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NSsidcheckBox">
+         <property name="text">
+          <string>NSsid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmPincheckBox">
+         <property name="text">
+          <string>VmPin</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="RssShmemcheckBox">
+         <property name="text">
+          <string>RssShmem</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmPTEcheckBox">
+         <property name="text">
+          <string>VmPTE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="untag_maskcheckBox">
+         <property name="text">
+          <string>untag_mask</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SigBlkcheckBox">
+         <property name="text">
+          <string>SigBlk</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CapEffcheckBox">
+         <property name="text">
+          <string>CapEff</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="Seccomp_filterscheckBox">
+         <property name="text">
+          <string>Seccomp_filters</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="pgrpcheckBox">
+         <property name="text">
+          <string>pgrp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="minfltcheckBox">
+         <property name="text">
+          <string>minflt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="stimecheckBox">
+         <property name="text">
+          <string>stime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="num_threadscheckBox">
+         <property name="text">
+          <string>num_threads</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="rsslimcheckBox">
+         <property name="text">
+          <string>rsslim</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kstkeipcheckBox">
+         <property name="text">
+          <string>kstkeip</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="wchancheckBox">
+         <property name="text">
+          <string>wchan</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="rt_prioritycheckBox">
+         <property name="text">
+          <string>rt_priority</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="end_datacheckBox">
+         <property name="text">
+          <string>end_data</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="env_endcheckBox">
+         <property name="text">
+          <string>env_end</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QCheckBox" name="NamecheckBox">
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NgidcheckBox">
+         <property name="text">
+          <string>Ngid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="GroupscheckBox">
+         <property name="text">
+          <string>Groups</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="KthreadcheckBox">
+         <property name="text">
+          <string>Kthread</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmHWMcheckBox">
+         <property name="text">
+          <string>VmHWM</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmDatacheckBox">
+         <property name="text">
+          <string>VmData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmSwapcheckBox">
+         <property name="text">
+          <string>VmSwap</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ThreadscheckBox">
+         <property name="text">
+          <string>Threads</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SigIgncheckBox">
+         <property name="text">
+          <string>SigIgn</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CapBndcheckBox">
+         <property name="text">
+          <string>CapBnd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="Cpus_allowedcheckBox">
+         <property name="text">
+          <string>Cpus_allowed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="sessioncheckBox">
+         <property name="text">
+          <string>session</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cminfltcheckBox">
+         <property name="text">
+          <string>cminflt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cutimecheckBox">
+         <property name="text">
+          <string>cutime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="itrealvaluecheckBox">
+         <property name="text">
+          <string>itrealvalue</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="startcodecheckBox">
+         <property name="text">
+          <string>startcode</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="signalcheckBox">
+         <property name="text">
+          <string>signal</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="nswapcheckBox">
+         <property name="text">
+          <string>nswap</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="policycheckBox">
+         <property name="text">
+          <string>policy</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="start_brkcheckBox">
+         <property name="text">
+          <string>start_brk</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="exit_codecheckBox">
+         <property name="text">
+          <string>exit_code</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="UmaskcheckBox">
+         <property name="text">
+          <string>Umask</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="TracerPidcheckBox">
+         <property name="text">
+          <string>TracerPid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NStgidcheckBox">
+         <property name="text">
+          <string>NStgid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmPeakcheckBox">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>VmPeak</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmRSScheckBox">
+         <property name="text">
+          <string>VmRSS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmStkcheckBox">
+         <property name="text">
+          <string>VmStk</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="HugetlbPagescheckBox">
+         <property name="text">
+          <string>HugetlbPages</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SigQcheckBox">
+         <property name="text">
+          <string>SigQ</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SigCgtcheckBox">
+         <property name="text">
+          <string>SigCgt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CapAmbcheckBox">
+         <property name="text">
+          <string>CapAmb</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="Cpus_allowed_listcheckBox">
+         <property name="text">
+          <string>Cpus_allowed_list</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="tty_nrcheckBox">
+         <property name="text">
+          <string>tty_nr</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="majfltcheckBox">
+         <property name="text">
+          <string>majflt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cstimecheckBox">
+         <property name="text">
+          <string>cstime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="starttimecheckBox">
+         <property name="text">
+          <string>starttime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="endcodecheckBox">
+         <property name="text">
+          <string>endcode</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="blockedcheckBox">
+         <property name="text">
+          <string>blocked</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cnswapcheckBox">
+         <property name="text">
+          <string>cnswap</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="guest_timecheckBox">
+         <property name="text">
+          <string>guest_time</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="arg_startcheckBox">
+         <property name="text">
+          <string>arg_start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>запланировано</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="StatecheckBox">
+         <property name="text">
+          <string>State</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="UidcheckBox">
+         <property name="text">
+          <string>Uid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NSpidcheckBox">
+         <property name="text">
+          <string>NSpid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmSizecheckBox">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>VmSize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="RssAnoncheckBox">
+         <property name="text">
+          <string>RssAnon</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmExecheckBox">
+         <property name="text">
+          <string>VmExe</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CoreDumpingcheckBox">
+         <property name="text">
+          <string>CoreDumping</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SigPndcheckBox">
+         <property name="text">
+          <string>SigPnd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CapInhcheckBox">
+         <property name="text">
+          <string>CapInh</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NoNewPrivscheckBox">
+         <property name="text">
+          <string>NoNewPrivs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="Mems_allowedcheckBox">
+         <property name="text">
+          <string>Mems_allowed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="tpgidcheckBox">
+         <property name="text">
+          <string>tpgid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cmajfltcheckBox">
+         <property name="text">
+          <string>cmajflt</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="prioritycheckBox">
+         <property name="text">
+          <string>priority</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="vsizecheckBox">
+         <property name="text">
+          <string>vsize</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="startstackcheckBox">
+         <property name="text">
+          <string>startstack</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="sigignorecheckBox">
+         <property name="text">
+          <string>sigignore</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="exit_signalcheckBox">
+         <property name="text">
+          <string>exit_signal</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cguest_timecheckBox">
+         <property name="text">
+          <string>cguest_time</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="arg_endcheckBox">
+         <property name="text">
+          <string>arg_end</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>запланировано</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="PPidcheckBox">
+         <property name="text">
+          <string>PPid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="GidcheckBox">
+         <property name="text">
+          <string>Gid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="NSpgidcheckBox">
+         <property name="text">
+          <string>NSpgid</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmLckcheckBox">
+         <property name="text">
+          <string>VmLck</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="RssFilecheckBox">
+         <property name="text">
+          <string>RssFile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="VmLibcheckBox">
+         <property name="text">
+          <string>VmLib</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="THP_enabledcheckBox">
+         <property name="text">
+          <string>THP_enabled</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ShdPndcheckBox">
+         <property name="text">
+          <string>ShdPnd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="CapPrmcheckBox">
+         <property name="text">
+          <string>CapPrm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SeccompcheckBox">
+         <property name="text">
+          <string>Seccomp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="Mems_allowed_listcheckBox">
+         <property name="text">
+          <string>Mems_allowed_list</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="flagscheckBox">
+         <property name="text">
+          <string>flags</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="utimecheckBox">
+         <property name="text">
+          <string>utime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="nicecheckBox">
+         <property name="text">
+          <string>nice</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="rsscheckBox">
+         <property name="text">
+          <string>rss</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kstkespcheckBox">
+         <property name="text">
+          <string>kstkesp</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="sigcatchcheckBox">
+         <property name="text">
+          <string>sigcatch</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="processorcheckBox">
+         <property name="text">
+          <string>processor</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="start_datacheckBox">
+         <property name="text">
+          <string>start_data</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="env_startcheckBox">
+         <property name="text">
+          <string>env_start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>запланировано</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="Speculation_Store_BypasscheckBox">
+       <property name="text">
+        <string>Speculation_Store_Bypass</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="SpeculationIndirectBranchcheckBox">
+       <property name="text">
+        <string>SpeculationIndirectBranch</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="voluntary_ctxt_switchescheckBox">
+       <property name="text">
+        <string>voluntary_ctxt_switches</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QCheckBox" name="nonvoluntary_ctxt_switchescheckBox">
+       <property name="text">
+        <string>nonvoluntary_ctxt_switches</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="x86_Thread_featurescheckBox">
+       <property name="text">
+        <string>x86_Thread_features</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="x86_Thread_features_lockedcheckBox">
+       <property name="text">
+        <string>x86_Thread_features_locked</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="delayacct_blkio_tickscheckBox">
+     <property name="text">
+      <string>delayacct_blkio_ticks</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

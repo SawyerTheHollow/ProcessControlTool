@@ -427,6 +427,8 @@ ProccessControlTool_autogen/timestamp: \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool_autogen/moc_predefs.h \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/filter.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/main.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.cpp \
@@ -696,6 +698,7 @@ ProccessControlTool_autogen/timestamp: \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
 	/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.ui \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.ui \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/signalwindow.ui \
 	/home/sawyer/Qt/Tools/CMake/bin/cmake

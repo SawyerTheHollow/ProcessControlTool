@@ -38,13 +38,15 @@ struct qt_meta_tag_ZN10MainWindowE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringData(
     "MainWindow",
-    "updateProcessList",
+    "loadColumnVisibility",
     "",
+    "updateProcessList",
     "filterProcesses",
     "text",
     "terminateProcess",
     "on_pauseStartButton_clicked",
-    "on_signalWindowButton_clicked"
+    "on_signalWindowButton_clicked",
+    "on_columnVisibilityWindowButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,7 +58,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN10MainWindowE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,15 +66,19 @@ Q_CONSTINIT static const uint qt_meta_data_ZN10MainWindowE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x08,    1 /* Private */,
-       3,    1,   45,    2, 0x08,    2 /* Private */,
-       5,    0,   48,    2, 0x08,    4 /* Private */,
-       6,    0,   49,    2, 0x08,    5 /* Private */,
-       7,    0,   50,    2, 0x08,    6 /* Private */,
+       1,    0,   56,    2, 0x0a,    1 /* Public */,
+       3,    0,   57,    2, 0x08,    2 /* Private */,
+       4,    1,   58,    2, 0x08,    3 /* Private */,
+       6,    0,   61,    2, 0x08,    5 /* Private */,
+       7,    0,   62,    2, 0x08,    6 /* Private */,
+       8,    0,   63,    2, 0x08,    7 /* Private */,
+       9,    0,   64,    2, 0x08,    8 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -89,6 +95,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN10MainWindowE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
+        // method 'loadColumnVisibility'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updateProcessList'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'filterProcesses'
@@ -99,6 +107,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_pauseStartButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_signalWindowButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_columnVisibilityWindowButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -109,11 +119,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<MainWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->updateProcessList(); break;
-        case 1: _t->filterProcesses((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->terminateProcess(); break;
-        case 3: _t->on_pauseStartButton_clicked(); break;
-        case 4: _t->on_signalWindowButton_clicked(); break;
+        case 0: _t->loadColumnVisibility(); break;
+        case 1: _t->updateProcessList(); break;
+        case 2: _t->filterProcesses((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->terminateProcess(); break;
+        case 4: _t->on_pauseStartButton_clicked(); break;
+        case 5: _t->on_signalWindowButton_clicked(); break;
+        case 6: _t->on_columnVisibilityWindowButton_clicked(); break;
         default: ;
         }
     }
@@ -138,14 +150,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

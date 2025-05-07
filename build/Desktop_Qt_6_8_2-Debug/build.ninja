@@ -89,6 +89,14 @@ build CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o: CXX_COMPILER__Procc
   OBJECT_DIR = CMakeFiles/ProccessControlTool.dir
   OBJECT_FILE_DIR = CMakeFiles/ProccessControlTool.dir
 
+build CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o: CXX_COMPILER__ProccessControlTool_unscanned_Debug /home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp || cmake_object_order_depends_target_ProccessControlTool
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool_autogen/include -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtCore -isystem /home/sawyer/Qt/6.8.2/gcc_64/include -isystem /home/sawyer/Qt/6.8.2/gcc_64/mkspecs/linux-g++ -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtWidgets -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/ProccessControlTool.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProccessControlTool.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProccessControlTool
@@ -97,7 +105,7 @@ build CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o: CXX_COMPILER__Procc
 #############################################
 # Link the executable ProccessControlTool
 
-build ProccessControlTool: CXX_EXECUTABLE_LINKER__ProccessControlTool_Debug CMakeFiles/ProccessControlTool.dir/ProccessControlTool_autogen/mocs_compilation.cpp.o CMakeFiles/ProccessControlTool.dir/main.cpp.o CMakeFiles/ProccessControlTool.dir/mainwindow.cpp.o CMakeFiles/ProccessControlTool.dir/processInfo.cpp.o CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o | /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2 /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2 || ProccessControlTool_autogen ProccessControlTool_autogen_timestamp_deps
+build ProccessControlTool: CXX_EXECUTABLE_LINKER__ProccessControlTool_Debug CMakeFiles/ProccessControlTool.dir/ProccessControlTool_autogen/mocs_compilation.cpp.o CMakeFiles/ProccessControlTool.dir/main.cpp.o CMakeFiles/ProccessControlTool.dir/mainwindow.cpp.o CMakeFiles/ProccessControlTool.dir/processInfo.cpp.o CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o | /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2 /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2 || ProccessControlTool_autogen ProccessControlTool_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/sawyer/Qt/6.8.2/gcc_64/lib:  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2  -Wl,-rpath-link,/home/sawyer/Qt/6.8.2/gcc_64/lib
   OBJECT_DIR = CMakeFiles/ProccessControlTool.dir
@@ -182,7 +190,7 @@ build ProccessControlTool_autogen_timestamp_deps: phony
 #############################################
 # Utility command for ProccessControlTool_autogen
 
-build ProccessControlTool_autogen: phony CMakeFiles/ProccessControlTool_autogen ProccessControlTool_autogen/include/ui_mainwindow.h ProccessControlTool_autogen/include/ui_signalwindow.h ProccessControlTool_autogen/timestamp ProccessControlTool_autogen/mocs_compilation.cpp ProccessControlTool_autogen_timestamp_deps
+build ProccessControlTool_autogen: phony CMakeFiles/ProccessControlTool_autogen ProccessControlTool_autogen/include/ui_mainwindow.h ProccessControlTool_autogen/include/ui_signalwindow.h ProccessControlTool_autogen/include/ui_columnvisibilitywindow.h ProccessControlTool_autogen/timestamp ProccessControlTool_autogen/mocs_compilation.cpp ProccessControlTool_autogen_timestamp_deps
 
 
 #############################################
@@ -199,7 +207,7 @@ build ProccessControlTool_autogen/timestamp ProccessControlTool_autogen/mocs_com
 #############################################
 # Phony custom command for CMakeFiles/ProccessControlTool_autogen
 
-build CMakeFiles/ProccessControlTool_autogen ProccessControlTool_autogen/include/ui_mainwindow.h ProccessControlTool_autogen/include/ui_signalwindow.h | ${cmake_ninja_workdir}CMakeFiles/ProccessControlTool_autogen ${cmake_ninja_workdir}ProccessControlTool_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}ProccessControlTool_autogen/include/ui_signalwindow.h: phony ProccessControlTool_autogen/timestamp || ProccessControlTool_autogen_timestamp_deps
+build CMakeFiles/ProccessControlTool_autogen ProccessControlTool_autogen/include/ui_mainwindow.h ProccessControlTool_autogen/include/ui_signalwindow.h ProccessControlTool_autogen/include/ui_columnvisibilitywindow.h | ${cmake_ninja_workdir}CMakeFiles/ProccessControlTool_autogen ${cmake_ninja_workdir}ProccessControlTool_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}ProccessControlTool_autogen/include/ui_signalwindow.h ${cmake_ninja_workdir}ProccessControlTool_autogen/include/ui_columnvisibilitywindow.h: phony ProccessControlTool_autogen/timestamp || ProccessControlTool_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
