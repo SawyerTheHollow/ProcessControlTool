@@ -20,6 +20,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
         <widget class="QCheckBox" name="PidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Process id - это уникальный идентификатор процесса. Каждый запущенный процесс получает свой собственный Pid, который используется для управления процессами и их взаимодействия с системой.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Pid</string>
          </property>
@@ -27,6 +30,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="TgidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Thread Group id - это идентификатор группы потоков, к которой принадлежит процесс. В Linux процессы могут состоять из одного или нескольких потоков, и все потоки одного процесса имеют общий идентификатор группы потоков.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Tgid</string>
          </property>
@@ -34,6 +40,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="FDSizecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;File Descriptors Size - это количество файловых дескрипторов, которые в данный момент открыты процессом. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>FDSize</string>
          </property>
@@ -41,6 +50,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NSsidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Space session id - это идентификатор сессии процесса в контексте пространств имён.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>NSsid</string>
          </property>
@@ -48,6 +60,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmPincheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Pinned - это объем виртуальной памяти, который был прикреплен к физической памяти.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmPin</string>
          </property>
@@ -55,6 +70,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="RssShmemcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resident set size Shared memory - это объем физической памяти, который используется процессом для общих (shared) страниц памяти. Эти страницы могут быть использованы несколькими процессами одновременно&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>RssShmem</string>
          </property>
@@ -62,6 +80,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmPTEcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Page Table Entries - это объем виртуальной памяти , который используется процессом для таблиц страниц (Page Table Entries, PTE). Таблицы страниц - это структуры данных, которые используются операционной системой для управления виртуальной памятью и сопоставления виртуальных адресов с физическими адресами в памяти.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmPTE</string>
          </property>
@@ -69,6 +90,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="untag_maskcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;untagging mask - это битовая маска, используемая для удаления тегов из адресов памяти. Является частью механизма управления памятью и тегированием страниц в системах на базе архитектур, которые поддерживают подобные механизмы. Этот механизм позволяет правильно интерпретировать адреса памяти без учета тегов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>untag_mask</string>
          </property>
@@ -76,6 +100,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SigBlkcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signals Blocked - это набор сигналов, которые были заблокированы для данного процесса. Это означает, что процесс не будет обрабатывать эти сигналы, даже если они были отправлены ему. Представлен в виде битовой маски, где каждый бит соответствует определенному сигналу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>SigBlk</string>
          </property>
@@ -83,6 +110,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CapEffcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capabilities Effective - это набор возможностей, которые фактически применяются к процессу в данный момент. Представлен в виде битовой маски, где каждый бит соответствует определенной возможности. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CapEff</string>
          </property>
@@ -90,6 +120,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="Seccomp_filterscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Secure Computing mode filters - это количество фильтров seccomp, применяемых к процессу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Seccomp_filters</string>
          </property>
@@ -97,6 +130,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="pgrpcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;process group id - это идентификатор группы процессов к которой принадлежит данный процесс.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>pgrp</string>
          </property>
@@ -104,6 +140,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="minfltcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minor page faults - это количество &amp;quot;малых&amp;quot;страничных ошибок, которые произошли в процессе. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения &lt;span style=&quot; font-family:'monospace';&quot;&gt;malloc()&lt;/span&gt; или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>minflt</string>
          </property>
@@ -111,6 +150,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="stimecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;system time - это количество тиков процессора, которые процесс провёл в режиме ядра. Это время, затраченное на выполнение системных вызовов и обслуживание ядром запросов процесса. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>stime</string>
          </property>
@@ -118,6 +160,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="num_threadscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;number of threads - это количество потоков выполнения, принадлежащих данному процессу. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>num_threads</string>
          </property>
@@ -125,6 +170,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="rsslimcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;resident set size limit - это максимально допустимый размер резидентной памяти в страницах, который процесс может использовать без принудительного завершения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>rsslim</string>
          </property>
@@ -132,6 +180,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="kstkeipcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kernel stack extended instruction pointer - это виртуальный адрес следующей инструкции ядра, которую должен выполнить процесс после возврата из прерывания или системного вызова.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>kstkeip</string>
          </property>
@@ -139,6 +190,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="wchancheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wait channel - это адрес функции ядра, вызвавшей ожидание, когда процесс находится в состоянии &lt;span style=&quot; font-family:'monospace';&quot;&gt;S&lt;/span&gt; (interruptible sleep) или &lt;span style=&quot; font-family:'monospace';&quot;&gt;D&lt;/span&gt; (uninterruptible sleep).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>wchan</string>
          </property>
@@ -146,6 +200,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="rt_prioritycheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;real time priority -  это приоритет процесса в режиме реального времени, если он работает под управлением планировщика реального времени (SCHED_FIFO или SCHED_RR). Может принимать значения от 1 до 99, где 99 - наивысший приоритет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>rt_priority</string>
          </property>
@@ -153,6 +210,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="end_datacheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это виртуальный адрес, отмечающий конец сегмента (.data) c инициализированными данными и начало BSS-сегмента (неинициализированные данные).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>end_data</string>
          </property>
@@ -160,6 +220,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="env_endcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;environment end - это виртуальный адрес конца области памяти, содержащей переменные окружения процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>env_end</string>
          </property>
@@ -171,6 +234,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QCheckBox" name="NamecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это название, которое было задано процессу при его создании.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Name</string>
          </property>
@@ -178,6 +244,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NgidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numa group id - это идентификатор группы NUMA (Non-Uniform Memory Access), к которой принадлежит процесс. NUMA — это архитектура памяти, используемая в многопроцессорных системах, где доступ к памяти может быть более быстрым для процессоров, находящихся ближе к ней.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Ngid</string>
          </property>
@@ -185,6 +254,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="GroupscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это группы, к которым принадлежит процесс. Значение представлено в виде списка идентификаторов групп (Gid):&lt;/p&gt;&lt;p&gt;Первое значение в списке соответствует реальному Gid пользователя, который запустил процесс.&lt;/p&gt;&lt;p&gt;Остальные значения представляют собой дополнительные группы, к которым принадлежит пользователь.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Groups</string>
          </property>
@@ -192,6 +264,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="KthreadcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kernel thread - это показатель того, является ли процесс потоком ядра или нет. Если значение равно 1, то процесс является потоком ядра. Если значение равно 0, то процесс является пользовательским.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Kthread</string>
          </property>
@@ -199,6 +274,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmHWMcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory High Water Mark - это максимальный объем физической памяти, который процесс использовал за все время своего существования. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmHWM</string>
          </property>
@@ -206,6 +284,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmDatacheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Data - это объем виртуальной памяти, который используется процессом для данных, включая динамически выделенные данные, такие как переменные, массивы и структуры, а также данные, загруженные из файлов. Этот параметр включает в себя память, выделенную для анонимных страниц и страниц, связанных с файлами.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmData</string>
          </property>
@@ -213,6 +294,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmSwapcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Swap space - это объем виртуальной памяти , который процесс использует в области обмена (swap space), так называемом файле подкачки. Swap - это механизм, который позволяет операционной системе временно перемещать данные из оперативной памяти на диск, чтобы освободить в ней место для других процессов или данных.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmSwap</string>
          </property>
@@ -220,6 +304,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="ThreadscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это общее количество потоков, которые принадлежат данному процессу. Оно включает как основные потоки, так и любые дополнительные потоки, созданные в процессе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Threads</string>
          </property>
@@ -227,6 +314,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SigIgncheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signals Ignored - это набор сигналов, которые будут проигнорированы процессом. Это означает, что процесс не будет реагировать на эти сигналы, даже если они были отправлены ему. Представлен в виде битовой маски, где каждый бит соответствует определенному сигналу. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>SigIgn</string>
          </property>
@@ -234,6 +324,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CapBndcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capabilities Bounding - это набор возможностей (capabilities), которые ограничивают возможности процесса. Процесс не может использовать возможности, которые не включены в этот набор, даже если они разрешены или унаследованы. Представлен в виде битовой маски, где каждый бит соответствует определенной возможности.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CapBnd</string>
          </property>
@@ -241,6 +334,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="Cpus_allowedcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это показатель того, на каких процессорных ядрах разрешено выполнение данного процесса. представлено в виде битовой маски, где каждый бит соответствует определенному процессорному ядру. К примеру, если значение равно 3, что в двоичном представлении - 11, то процесс может выполняться на первых двух ядрах (ядра 0 и 1).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Cpus_allowed</string>
          </property>
@@ -248,6 +344,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="sessioncheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это идентификатор сессии, к которой принадлежит процесс.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>session</string>
          </property>
@@ -255,6 +354,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cminfltcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative minor faults - количество &amp;quot;малых&amp;quot;страничных ошибок как самого родительского процесса, так и всех его дочерних процессов. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения &lt;span style=&quot; font-family:'monospace';&quot;&gt;malloc()&lt;/span&gt; или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cminflt</string>
          </property>
@@ -262,6 +364,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cutimecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative user mode time - это суммарное время, проведённое процессом и всеми дочерними процессами в пользовательском режиме (user mode), выраженное в тиках процессора. Учитывает время уже завершённых дочерних процессов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cutime</string>
          </property>
@@ -269,6 +374,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="itrealvaluecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;interval timer real value - это оставшееся время до следующего SIGALRM сигнала в тиках ядра. В современных версиях Linux это поле утратило своё практическое значение и почти всегда содержит 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>itrealvalue</string>
          </property>
@@ -276,6 +384,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="startcodecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это виртуальный адрес в памяти, по которому начинается исполняемый код программы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>startcode</string>
          </property>
@@ -283,6 +394,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="signalcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это битовая маска ожидающих (pending) сигналов для процесса. Это числовое значение, где каждый бит соответствует определённому сигналу, который процесс должен обработать. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>signal</string>
          </property>
@@ -290,6 +404,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="nswapcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;number of swap pages - это количество страниц памяти процесса, выгруженных в swap-область. В современных версиях Linux (начиная с ядра 2.6.34) это поле больше не поддерживается и всегда возвращает значение 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>nswap</string>
          </property>
@@ -297,6 +414,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="policycheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это текущуя политика планирования процесса, которая определяет, как ядро Linux распределяет для него время процессора. Может принимать значения:&lt;/p&gt;&lt;p&gt;0: SCHED_NORMAL или SCHED_OTHER - Стандартный планировщик (CFS — Completely Fair Scheduler).&lt;/p&gt;&lt;p&gt;1: SCHED_FIFO (FIFO) - процесс выполняется, пока не завершится или не уступит CPU.&lt;/p&gt;&lt;p&gt;2: SCHED_RR (Round Robin) -  аналогично FIFO, но с квантованием времени.&lt;/p&gt;&lt;p&gt;3: SCHED_BATCH - Для пакетных задач (аналог SCHED_NORMAL но с меньшим приоритетом).&lt;/p&gt;&lt;p&gt;4: Код зарезервирован, но не используется.&lt;/p&gt;&lt;p&gt;5: SCHED_IDLE - Крайне низкий приоритет (фоновые задачи, когда система простаивает).&lt;/p&gt;&lt;p&gt;6: SCHED_DEADLINE - Для задач с жёсткими дедлайнами (на основе Earliest Deadline First).&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>policy</string>
          </property>
@@ -304,6 +424,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="start_brkcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;start break - это виртуальный адрес, с которого начинается куча (heap) процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>start_brk</string>
          </property>
@@ -311,6 +434,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="exit_codecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это &lt;span style=&quot; font-weight:700;&quot;&gt;код завершения процесса&lt;/span&gt;, если он был завершён, но его статус ещё не прочитан родительским процессом. Значение принимает вид числа, которое содержит код возврата и номер сигнала. Актуально только для процессов со статусом Z, для работающих процессов значение будет равно 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>exit_code</string>
          </property>
@@ -322,6 +448,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QCheckBox" name="UmaskcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User file creation mask - это параметр, который определяет права доступа по умолчанию для новых файлов и директорий. Он задает, какие права доступа будут запрещены при создании новых файлов и директорий.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Umask</string>
          </property>
@@ -329,6 +458,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="TracerPidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TracerPid - это идентификатор процесса, который в данный момент отслеживает (или &amp;quot;трассирует&amp;quot;) данный процесс. Если его значение равно 0, это означает, что текущий процесс не отслеживается ни одним другим процессом.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>TracerPid</string>
          </property>
@@ -336,6 +468,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NStgidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Space thread group id - это идентификатор группы потоков процесса в контексте пространств имен.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>NStgid</string>
          </property>
@@ -346,6 +481,9 @@
          <property name="enabled">
           <bool>true</bool>
          </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Peak - это максимальный объем виртуальной памяти, который процесс использовал с момента его запуска.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmPeak</string>
          </property>
@@ -353,6 +491,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmRSScheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Resident Set Size - это объем физической памяти, который в данный момент используется процессом и находится в оперативной памяти. Это значение отражает количество страниц памяти, которые процесс фактически использует и которые не были выгружены на диск.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmRSS</string>
          </property>
@@ -360,6 +501,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmStkcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Stack - это объем виртуальной памяти, который используется процессом для стека. Стек - это область памяти, используемая для хранения временных данных, таких как локальные переменные, адреса возврата и параметры функций.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmStk</string>
          </property>
@@ -367,6 +511,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="HugetlbPagescheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Huge translation lookaside buffer Pages - это количество страниц, выделенных для использования с большими страницами (huge pages) в процессе. Большие страницы - это специальные страницы памяти, которые имеют размер больше стандартных страниц.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>HugetlbPages</string>
          </property>
@@ -374,6 +521,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SigQcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal Queue - это количество сигналов, которые были отправлены процессу, но еще не были обработаны. Это может включать как сигналы, которые ожидают обработки, так и сигналы, которые были отправлены, но не могут быть обработаны из-за того, что процесс находится в состоянии ожидания или блокировки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>SigQ</string>
          </property>
@@ -381,6 +531,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SigCgtcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signals Caught - это набор сигналов, которые были перехвачены (или обработаны) процессом. Это означает, что процесс имеет пользовательские обработчики для этих сигналов и будет выполнять определенные действия при их получении. Представлен в виде битовой маски, где каждый бит соответствует определенному сигналу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>SigCgt</string>
          </property>
@@ -388,6 +541,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CapAmbcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capabilities Ambient - это набор возможностей, которые могут быть добавлены к эффективным возможностям процесса. Представлен в виде битовой маски, где каждый бит соответствует определенной возможности.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CapAmb</string>
          </property>
@@ -395,6 +551,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="Cpus_allowed_listcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это список процессорных ядер, на которых разрешено выполнение данного процесса. Предоставляет более удобочитаемую информацию по сравнению с  Cpus_allowed. Значения представлены в виде списка отдельных номеров ядер и диапазонов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Cpus_allowed_list</string>
          </property>
@@ -402,6 +561,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="tty_nrcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;teletype number - это идентификатор управляющего терминала TTY, связанного с процессом. Он указывает на терминальное устройство (виртуальное или физическое), с которым взаимодействует процесс. Если процесс не привязан к терминалу к примеру, системный демон, значение будет равно 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>tty_nr</string>
          </property>
@@ -409,6 +571,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="majfltcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;major page faults - это количество &amp;quot;больших&amp;quot; страничных ошибок (major page faults), которые произошли в процессе. &lt;/p&gt;&lt;p&gt;major page fault - это ситуация, когда процесс обращается к памяти, которой нет в физической RAM, и ядро вынуждено либо подгрузить данные с диска (из swap-раздела или файловой системы), либо освободить место в RAM, выгрузив другие страницы (если необходимо).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>majflt</string>
          </property>
@@ -416,6 +581,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cstimecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative system time - это суммарное время, проведённое данным процессом всеми завершёнными дочерними процессами в режиме ядра (kernel mode), измеренное в тиках процессора. Не учитывает активных потомков.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cstime</string>
          </property>
@@ -423,6 +591,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="starttimecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это время старта процесса в тиках процессора с момента загрузки системы. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>starttime</string>
          </property>
@@ -430,6 +601,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="endcodecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это виртуальный адрес в памяти, по которому заканчивается исполняемый код программы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>endcode</string>
          </property>
@@ -437,6 +611,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="blockedcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это битовую маску сигналов, заблокированных или игнорируемых процессом. Это числовое значение, где каждый установленный бит указывает на сигнал, который процесс временно игнорирует или откладывает.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>blocked</string>
          </property>
@@ -444,6 +621,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cnswapcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative number of swap pages - это совокупное количество страниц памяти, выгруженное в swap-область для данного процесса и всех его завершённых дочерних процессов. В современных версиях Linux (начиная с ядра ~2.6.34) это поле не поддерживается и всегда возвращает 0.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cnswap</string>
          </property>
@@ -451,6 +631,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="guest_timecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это количество тиков процессора, которые процесс потратил в режиме гостевой ОС (виртуальной машины). Поле заполняется, только если процесс является виртуальной машиной.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>guest_time</string>
          </property>
@@ -458,6 +641,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="arg_startcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;arguments start - это виртуальный адрес начала области памяти, содержащей аргументы командной строки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>arg_start</string>
          </property>
@@ -479,6 +665,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QCheckBox" name="StatecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Текущее состояние процесса. Возможные значения:&lt;/p&gt;&lt;p&gt;&lt;br/&gt;R: Running (выполняется)&lt;/p&gt;&lt;p&gt;S: Sleeping (ожидание)&lt;/p&gt;&lt;p&gt;D: Uninterruptible sleep (непрерываемое ожидание)&lt;/p&gt;&lt;p&gt;T: Stopped (остановлен)&lt;/p&gt;&lt;p&gt;Z: Zombie (зомби-процесс)&lt;/p&gt;&lt;p&gt;X: Dead (мертвый)&lt;/p&gt;&lt;p&gt;I: Idle (простаивает)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>State</string>
          </property>
@@ -486,6 +675,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="UidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;User IDs - это идентификаторы пользователя, связанные с процессом. Значение Uid представлено в виде четырех чисел. Эти числа представляют собой: &lt;/p&gt;&lt;p&gt;Real Uid: реальный идентификатор пользователя, который запустил процесс.&lt;/p&gt;&lt;p&gt;Effective Uid: эффективный идентификатор пользователя, который используется для проверки прав доступа к ресурсам. Может отличаться от Real Uid.&lt;/p&gt;&lt;p&gt;Saved Uid: сохраненный идентификатор пользователя, который используется для восстановления Effective Uid после изменения.&lt;/p&gt;&lt;p&gt;Gid: идентификатор группы, к которой принадлежит процесс.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Uid</string>
          </property>
@@ -493,6 +685,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NSpidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Space process id - это идентификатор процесса в контексте пространств имён.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>NSpid</string>
          </property>
@@ -503,6 +698,9 @@
          <property name="enabled">
           <bool>true</bool>
          </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Size - это текущий объем виртуальной памяти, который процесс использует в данный момент.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmSize</string>
          </property>
@@ -510,6 +708,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="RssAnoncheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resident set size Anonymous - это объем физической памяти, который используется процессом и относится к анонимным страницам.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>RssAnon</string>
          </property>
@@ -517,6 +718,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmExecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Executable - это объем виртуальной памяти, который используется процессом для исполняемого кода. Он включает в себя память, выделенную для кода программы, который выполняется в данный момент.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmExe</string>
          </property>
@@ -524,6 +728,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CoreDumpingcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это состояние механизма создания дампов памяти (core dumps). Дампы памяти представляют собой снимки состояния процесса в момент его завершения, которые могут быть использованы для отладки и анализа причин сбоев. Может принимать значения 0 или 1. Если значение равно 0, то дамп памяти не будет создан для данного процесса. Если значение равно 1, то дамп памяти может быть создан для данного процесса в случае его аварийного завершения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CoreDumping</string>
          </property>
@@ -531,6 +738,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SigPndcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signals Pending - это набор сигналов, которые были отправлены процессу и ожидают обработки. Представлен в виде битовой маски, где каждый бит соответствует определенному сигналу. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>SigPnd</string>
          </property>
@@ -538,6 +748,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CapInhcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capabilities Inheritable - это набор возможностей, которые были унаследованы процессом от его родителя и могут быть использованы в процессе. Представлен в виде битовой маски, где каждый бит соответствует определенной возможности.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CapInh</string>
          </property>
@@ -545,6 +758,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NoNewPrivscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No New Privileges - это показатель того, установлен ли флаг, который запрещает процессу получение новых привилегий. Может принимать значение 0 или 1.&lt;/p&gt;&lt;p&gt;0: флаг не установлен, процесс может получать новые привилегии.&lt;/p&gt;&lt;p&gt;1: флаг установлен, процесс не может получать новые привилегии.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>NoNewPrivs</string>
          </property>
@@ -552,6 +768,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="Mems_allowedcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Memory nodes allowed - это список узлов памяти (NUMA nodes), на которых разрешено выделение памяти для процесса с указанным PID. Представлен в виде битовой маски, где каждый бит соответствует определенному узлу памяти. К примеру, если значение равно 3, что в двоичном представлении - 11, то процесс может выделять память из первых двух узлов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Mems_allowed</string>
          </property>
@@ -559,6 +778,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="tpgidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;terminal process group id - это идентификатор группы процессов, которая в данный момент является foreground-группой для управляющего терминала процесса. В foreground-группу входят интерактивные процессы. Фоновые процессы в эту группу не входят, поэтому, если значение этого параметра равно 0, то процесс фоновый.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>tpgid</string>
          </property>
@@ -566,6 +788,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cmajfltcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative major faults - это совокупное количество &amp;quot;больших&amp;quot; страничных ошибок (major page faults) для процесса и всех его дочерних процессов. &lt;/p&gt;&lt;p&gt;major page fault - это ситуация, когда процесс обращается к памяти, которой нет в физической RAM, и ядро вынуждено либо подгрузить данные с диска (из swap-раздела или файловой системы), либо освободить место в RAM, выгрузив другие страницы (если необходимо).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cmajflt</string>
          </property>
@@ -573,6 +798,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="prioritycheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это текущий статический приоритет планирования процесса в ядре. Статический приоритет зависит от nice-значения, в отличие от динамического, где учитывается активность процесса. Может принимать значение от 0 до 39. Чем меньше, тем выше приоритет. В современных ядрах этот показатель дублирует поле nice, но отличается форматом. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>priority</string>
          </property>
@@ -580,6 +808,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="vsizecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;virtual memory size - это объём виртуальной памяти в байтах, выделенной процессу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>vsize</string>
          </property>
@@ -587,6 +818,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="startstackcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это виртуальный адрес верхней границы стека процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>startstack</string>
          </property>
@@ -594,6 +828,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="sigignorecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;signals ignored - это битовая маска сигналов, которые процесс игнорирует. Это числовое значение, где каждый установленный бит соответствует сигналу, на который процесс настроен не реагировать.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>sigignore</string>
          </property>
@@ -601,6 +838,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="exit_signalcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это сигнал, который ядро отправит родительскому процессу (обычно &lt;span style=&quot; font-family:'monospace';&quot;&gt;SIGCHLD&lt;/span&gt;), когда данный процесс завершится.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>exit_signal</string>
          </property>
@@ -608,6 +848,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="cguest_timecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative guest time - совокупное время, проведённое процессом и всеми его завершёнными дочерними процессами в режиме гостевой ОС (виртуальной машины), измеренное в тиках процессора. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>cguest_time</string>
          </property>
@@ -615,6 +858,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="arg_endcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;arguments end - это виртуальный адрес конца области памяти, содержащей аргументы командной строки.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>arg_end</string>
          </property>
@@ -636,6 +882,9 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QCheckBox" name="PPidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Parent Process id указывает на идентификатор родительского процесса (Pid) для данного процесса. Каждый процесс в Unix-подобных операционных системах, имеет родительский процесс, который создал его.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>PPid</string>
          </property>
@@ -643,6 +892,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="GidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Group ids - это идентификаторы группы, связанные с процессом. Значение Gid представлено в виде четырех чисел:&lt;/p&gt;&lt;p&gt;Real Gid: реальный идентификатор группы, к которой принадледит пользователь, запустивший процесс.&lt;/p&gt;&lt;p&gt;Effective Gid: эффективный идентификатор группы, который используется для проверки прав доступа к ресурсам. Может отличаться от Real Gid.&lt;/p&gt;&lt;p&gt;Saved Gid: сохраненный идентификатор группы, который используется для восстановления Effective Gid после изменения. &lt;/p&gt;&lt;p&gt;Дополнительный Gid: дополнительные идентификаторы групп, к которым принадлежит процесс.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Gid</string>
          </property>
@@ -650,6 +902,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="NSpgidcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name Space process group id - это идентификатор группы процессов для данного процесса в контексте пространств имён.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>NSpgid</string>
          </property>
@@ -657,6 +912,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmLckcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Locked - это объем виртуальной памяти, который был заблокирован в оперативной памяти для процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmLck</string>
          </property>
@@ -664,6 +922,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="RssFilecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resident set size Files - это объем физической памяти, который используется процессом и относится к страницам, связанным с файлами. Эти страницы представляют собой данные, которые были загружены в память из файлов на диске и могут быть выгружены обратно на диск при необходимости.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>RssFile</string>
          </property>
@@ -671,6 +932,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="VmLibcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Virtual memory Libraries - это объем виртуальной памяти, который используется процессом для загруженных библиотек. Он включает в себя память, выделенную для динамически подключаемых библиотек, которые процесс использует во время своего выполнения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>VmLib</string>
          </property>
@@ -678,6 +942,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="THP_enabledcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transparent Huge Pages enabled - это состояние механизма, который позволяет ядру Linux автоматически управлять большими страницами без необходимости ручной настройки. Может принимать значения:&lt;/p&gt;&lt;p&gt;0: never - THP отключены.&lt;/p&gt;&lt;p&gt;1: always - THP всегда включены.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>THP_enabled</string>
          </property>
@@ -685,6 +952,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="ShdPndcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shared Pending signals - это набор сигналов, которые ожидают обработки и предназначены для всех потоков в процессе. Этот параметр показывает, какие сигналы были отправлены процессу и находятся в состоянии ожидания, но еще не были обработаны. Представлен в виде битовой маски, где каждый бит соответствует определенному сигналу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>ShdPnd</string>
          </property>
@@ -692,6 +962,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="CapPrmcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Capabilities Permitted - это набор возможностей, которые разрешены для процесса. Представлен в виде битовой маски, где каждый бит соответствует определенной возможности.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>CapPrm</string>
          </property>
@@ -699,6 +972,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="SeccompcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Secure Computing mode - это состояние механизма безопасности, который позволяет ограничивать набор системных вызовов, доступных процессу. Может принимать значения 0, 1 и 2.&lt;/p&gt;&lt;p&gt;0: Seccomp не активирован.&lt;/p&gt;&lt;p&gt;1: Seccomp активирован в режиме &amp;quot;strict&amp;quot;, который позволяет только очень ограниченный набор системных вызовов (например, &lt;span style=&quot; font-family:'monospace';&quot;&gt;exit&lt;/span&gt;, &lt;span style=&quot; font-family:'monospace';&quot;&gt;read&lt;/span&gt;, &lt;span style=&quot; font-family:'monospace';&quot;&gt;write&lt;/span&gt; и т.д.).&lt;/p&gt;&lt;p&gt;2: Seccomp активирован в режиме &amp;quot;filter&amp;quot; (фильтрация), который позволяет более гибко настраивать разрешенные системные вызовы с помощью фильтров BPF (Berkeley Packet Filter).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Seccomp</string>
          </property>
@@ -706,6 +982,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="Mems_allowed_listcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Memory nodes allowed list - это список узлов памяти (NUMA nodes), на которых разрешено выделение памяти для процесса с указанным PID. Предоставляет более удобочитаемую информацию чем Mems_allowed. Представлен в виде списка с отдельными номерами и диапазонами узлов.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Mems_allowed_list</string>
          </property>
@@ -713,6 +992,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="flagscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это битовую маску, отражающая различные флаги состояния процесса (например, режим выполнения, привилегии, особенности планирования). Эти флаги хранятся в виде десятичного числа, где каждый бит соответствует определённому свойству процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>flags</string>
          </property>
@@ -720,6 +1002,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="utimecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;user mode time - это количество тиков процессора, которые процесс провёл в пользовательском режиме, то есть выполнял свой код (например, логику приложения, библиотечные функции).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>utime</string>
          </property>
@@ -727,6 +1012,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="nicecheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это значение приоритета процесса, которое влияет на планирование задач. Может принимать значение от -20 до 19. Чем меньше, тем выше приоритет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>nice</string>
          </property>
@@ -734,6 +1022,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="rsscheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;resident set size - количество физических страниц памяти, выделенных процессу в RAM, исключая swap-область и неактивные страницы.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>rss</string>
          </property>
@@ -741,6 +1032,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="kstkespcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kernel stack extended stack pointer - это адрес вершины стека ядра, который использовался процессом при последнем входе в kernel mode (например, при системном вызове или прерывании).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>kstkesp</string>
          </property>
@@ -748,6 +1042,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="sigcatchcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;signals catched - это битовая маска сигналов, для которых процесс установил пользовательские обработчики. Это числовое значение, где каждый установленный бит соответствует сигналу, перехватываемому процессом через функции типа signal() или sigaction(). &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>sigcatch</string>
          </property>
@@ -755,6 +1052,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="processorcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это последний процессор, на котором планировщик ядра запускал процесс.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>processor</string>
          </property>
@@ -762,6 +1062,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="start_datacheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это виртуальный адрес, с которого начинается сегмент данных (.data) процесса. В этом сигменте данных хранятся инициализированные переменные, например, глобальные и статические.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>start_data</string>
          </property>
@@ -769,6 +1072,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="env_startcheckBox">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;environment start - это виртуальный адрес начала области памяти, содержащей переменные окружения процесса.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>env_start</string>
          </property>
@@ -792,6 +1098,9 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QCheckBox" name="Speculation_Store_BypasscheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это показатель того, активирована ли защита от уязвимости спекулятивного выполнения. Принимает значения vulnerable и not vulnerable.&lt;/p&gt;&lt;p&gt;vulnerable: процесс открыт к атаке через спекулятивное выполнение.&lt;/p&gt;&lt;p&gt;not vulnerable: процесс защищен от атаки через спекулятивное выполнение.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>Speculation_Store_Bypass</string>
        </property>
@@ -799,6 +1108,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="SpeculationIndirectBranchcheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это показатель того, активирована ли защита от уязвимости, связанной с косвенными переходами в процессе спекулятивного выполнения.&lt;/p&gt;&lt;p&gt;vulnerable: процесс открыт к атаке через спекулятивное выполнение с косвенными переходами.&lt;/p&gt;&lt;p&gt;not vulnerable: процесс защищен от атаки через спекулятивное выполнение с косвенными переходами.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>SpeculationIndirectBranch</string>
        </property>
@@ -806,6 +1118,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="voluntary_ctxt_switchescheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;voluntary context switches - это количество добровольных переключений контекста, которые произошли для данного процесса. Добровольное переключение контекста происходит, когда процесс сам решает уступить управление другим процессам, к примеру, во время ожидания ввода-вывода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>voluntary_ctxt_switches</string>
        </property>
@@ -817,6 +1132,9 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QCheckBox" name="nonvoluntary_ctxt_switchescheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;non voluntary context switches - это количество принудительных переключений контекста для данного процесса. Принудительное переключение контекста происходит, когда операционная система решает прервать выполнение процесса и передать управление другому процессу.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>nonvoluntary_ctxt_switches</string>
        </property>
@@ -824,6 +1142,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="x86_Thread_featurescheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это набор функций и возможностей потоков для процессов, работающих на архитектуре x86, которые поддерживаются процессором и могут быть использованы потоками в данном процессе.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>x86_Thread_features</string>
        </property>
@@ -831,6 +1152,9 @@
      </item>
      <item>
       <widget class="QCheckBox" name="x86_Thread_features_lockedcheckBox">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это показатель состояния блокировки функций потоков для процессов, работающих на архитектуре x86.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
        <property name="text">
         <string>x86_Thread_features_locked</string>
        </property>
@@ -840,6 +1164,9 @@
    </item>
    <item>
     <widget class="QCheckBox" name="delayacct_blkio_tickscheckBox">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;delay accounting task blocked i/o ticks - это количество тиков процессора, во время которых задача была задержана из-за ожидания ввода-вывода.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="text">
       <string>delayacct_blkio_ticks</string>
      </property>

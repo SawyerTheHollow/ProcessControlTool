@@ -960,7 +960,7 @@ vector<processInfo> getVectorOfProcesses(){
 
                     // Извлекаем Groups процесса
                     else if (line.find("Groups:") == 0) {
-                        process.setGroups(line.substr(7));
+                        process.setGroups(line.substr(8));
                     }
 
                     // Извлекаем NStgid процесса
@@ -1095,7 +1095,7 @@ vector<processInfo> getVectorOfProcesses(){
 
                     // Извлекаем SigPnd процесса
                     else if (line.find("SigPnd:") == 0) {
-                        process.setSigPnd(line.substr(7));
+                        process.setSigPnd(line.substr(8));
                     }
 
                     // Извлекаем ShdPnd процесса
