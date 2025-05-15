@@ -10,7 +10,7 @@
 using namespace std;
 
 int processInfo::getPid(){
-    return pid;
+    return Pid;
 }
 
 string processInfo::getName(){
@@ -445,8 +445,8 @@ string processInfo::getexit_code(){
     return exit_code;
 }
 
-void processInfo::setPid(int pid){
-    this->pid = pid;
+void processInfo::setPid(int Pid){
+    this->Pid = Pid;
 }
 
 void processInfo::setName(string Name){

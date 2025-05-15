@@ -38,7 +38,7 @@ public:
     {
         if (signalwindow->objectName().isEmpty())
             signalwindow->setObjectName("signalwindow");
-        signalwindow->resize(240, 160);
+        signalwindow->resize(270, 160);
         verticalLayout = new QVBoxLayout(signalwindow);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
@@ -124,8 +124,8 @@ public:
 
     void retranslateUi(QDialog *signalwindow)
     {
-        signalwindow->setWindowTitle(QCoreApplication::translate("signalwindow", "Dialog", nullptr));
-        signalwindow_pidlabel->setText(QCoreApplication::translate("signalwindow", "pid", nullptr));
+        signalwindow->setWindowTitle(QCoreApplication::translate("signalwindow", "\320\222\321\213\320\261\320\276\321\200 \321\201\320\270\320\263\320\275\320\260\320\273\320\260", nullptr));
+        signalwindow_pidlabel->setText(QCoreApplication::translate("signalwindow", "Pid", nullptr));
         signalwindow_pid->setText(QCoreApplication::translate("signalwindow", "TextLabel", nullptr));
         signalwindow_Namelabel->setText(QCoreApplication::translate("signalwindow", "Name", nullptr));
         signalwindow_Name->setText(QCoreApplication::translate("signalwindow", "TextLabel", nullptr));

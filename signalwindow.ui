@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
+    <width>270</width>
     <height>160</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Выбор сигнала</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -31,7 +31,7 @@
         </size>
        </property>
        <property name="text">
-        <string>pid</string>
+        <string>Pid</string>
        </property>
       </widget>
      </item>

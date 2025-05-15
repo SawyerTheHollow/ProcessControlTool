@@ -160,7 +160,7 @@
   /home/sawyer/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/sawyer/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/sawyer/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/sawyer/Документы/QtDiploma/ProccessControlTool/filter.h \
+  /home/sawyer/Документы/QtDiploma/ProccessControlTool/sortfilter.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

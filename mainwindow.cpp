@@ -19,11 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , model(new QStandardItemModel(this))
-    , proxyModel(new Filter(this)) {
+    , proxyModel(new SortFilter(this)) {
 
     ui->setupUi(this);
-
-    //connect(columnvisibilitywindow::columnvisibilitywindow);
 
     model->setHorizontalHeaderLabels(QStringList() << "Pid" << "Name" << "Umask" << "State" << "PPid"  << "Tgid" << "Ngid" << "TracerPid" << "Uid" << "Gid" << "FDSize" << "Groups" << "NStgid" << "NSpid" << "NSpgid"
                                                    << "NSsid" << "Kthread" << "VmPeak" << "VmSize" << "VmLck" << "VmPin" << "VmHWM" << "VmRSS" << "RssAnon" << "RssFile" << "RssShmem" << "VmData" << "VmStk"

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QStandardItemModel>
 #include <QSortFilterProxyModel>
-#include "filter.h"
+#include "sortfilter.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -25,7 +25,7 @@ public slots:
 
 private slots:
     void updateProcessList();
-    void filterProcesses(const QString &text); // Новый слот для фильтрации
+    void filterProcesses(const QString &text);
     void terminateProcess();
     void on_pauseStartButton_clicked();
     void on_signalWindowButton_clicked();
@@ -35,7 +35,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model;
-    Filter *proxyModel; // Прокси-модель
+    SortFilter *proxyModel; // Прокси-модель
     QTimer *timer;
 };
 

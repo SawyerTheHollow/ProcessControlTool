@@ -429,7 +429,6 @@ ProccessControlTool_autogen/timestamp: \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool_autogen/moc_predefs.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.h \
-	/home/sawyer/Документы/QtDiploma/ProccessControlTool/filter.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/main.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.h \
@@ -437,6 +436,7 @@ ProccessControlTool_autogen/timestamp: \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/processInfo.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/signalwindow.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/signalwindow.h \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/sortfilter.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \

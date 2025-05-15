@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Выбор видимости колонок</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_6">
    <item>
@@ -141,7 +141,7 @@
        <item>
         <widget class="QCheckBox" name="minfltcheckBox">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minor page faults - это количество &amp;quot;малых&amp;quot;страничных ошибок, которые произошли в процессе. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения &lt;span style=&quot; font-family:'monospace';&quot;&gt;malloc()&lt;/span&gt; или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;minor page faults - это количество &amp;quot;малых&amp;quot;страничных ошибок, которые произошли в процессе. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения malloc() или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>minflt</string>
@@ -355,7 +355,7 @@
        <item>
         <widget class="QCheckBox" name="cminfltcheckBox">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative minor faults - количество &amp;quot;малых&amp;quot;страничных ошибок как самого родительского процесса, так и всех его дочерних процессов. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения &lt;span style=&quot; font-family:'monospace';&quot;&gt;malloc()&lt;/span&gt; или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cumulative minor faults - количество &amp;quot;малых&amp;quot;страничных ошибок как самого родительского процесса, так и всех его дочерних процессов. &lt;/p&gt;&lt;p&gt;minor page fault - это ситуация, когда процесс обращается к памяти, которая уже выделена ему ядром, но либо страница памяти есть в физической RAM, но не привязана к таблице страниц процесса, либо страница находится в кэше страниц (например, после освобождения malloc() или переключения контекста).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>cminflt</string>
@@ -612,7 +612,7 @@
        <item>
         <widget class="QCheckBox" name="blockedcheckBox">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это битовую маску сигналов, заблокированных или игнорируемых процессом. Это числовое значение, где каждый установленный бит указывает на сигнал, который процесс временно игнорирует или откладывает.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это битовая маска сигналов, заблокированных или игнорируемых процессом. Это числовое значение, где каждый установленный бит указывает на сигнал, который процесс временно игнорирует или откладывает.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>blocked</string>

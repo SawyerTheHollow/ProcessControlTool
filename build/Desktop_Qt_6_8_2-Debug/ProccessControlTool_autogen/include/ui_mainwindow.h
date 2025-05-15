@@ -90,6 +90,7 @@ public:
         QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::MediaPlaybackPause));
         pauseStartButton->setIcon(icon);
         pauseStartButton->setCheckable(true);
+        pauseStartButton->setChecked(true);
 
         horizontalLayout->addWidget(pauseStartButton);
 
@@ -125,10 +126,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Process Control Tool", nullptr));
         filterLine->setPlaceholderText(QCoreApplication::translate("MainWindow", "\320\244\320\270\320\273\321\214\321\202\321\200", nullptr));
         columnVisibilityWindowButton->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\273\320\276\320\275\320\272\320\270", nullptr));
         pauseStartButton->setText(QString());
+#if QT_CONFIG(tooltip)
+        terminateButton->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>\320\237\321\200\320\270\320\274\320\265\320\275\321\217\320\265\321\202 \321\201\321\202\320\260\320\275\320\264\320\260\321\200\321\202\320\275\321\213\320\271 \320\264\320\273\321\217 \320\272\320\276\320\274\320\260\320\275\320\264\321\213 kill \321\201\320\270\320\263\320\275\320\260\320\273 9 SIGKILL.</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
         terminateButton->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\262\320\265\321\200\321\210\320\270\321\202\321\214 \320\277\321\200\320\276\321\206\320\265\321\201\321\201", nullptr));
 #if QT_CONFIG(tooltip)
         signalWindowButton->setToolTip(QCoreApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\270\320\265 \321\201\320\270\320\263\320\275\320\260\320\273\321\213", nullptr));

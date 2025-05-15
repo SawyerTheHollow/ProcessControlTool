@@ -9,7 +9,7 @@ using namespace std;
 class processInfo {
 private:
     //Из файла Status:
-    int pid;
+    int Pid;
     string Name;
     string Umask;
     string State;
@@ -232,7 +232,7 @@ public:
     string getenv_end();
     string getexit_code();
     //Из файла Status:
-    void setPid(int pid);
+    void setPid(int Pid);
     void setName(string Name);
     void setUmask(string Umask);
     void setState(string State);
