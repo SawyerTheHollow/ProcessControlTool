@@ -1207,9 +1207,7 @@ vector<processInfo> getVectorOfProcesses(){
                     else if (line.find("x86_Thread_features_locked:") == 0) {
                         process.setx86_Thread_features_locked(line.substr(27));
                     }
-
-                    /////////////////////////////////////
-                    /*Извлечение информации из файла Stat
+                    /* Извлечение информации из файла Stat
                      * Первые 2 поля этого файла пропущены из-за сложностей их парсинга
                      *
                      * Памятка значений вектора vectorOfStatFields[i], где каждое i-тое значение означает:
@@ -1272,7 +1270,7 @@ vector<processInfo> getVectorOfProcesses(){
 
                         istringstream stringStatStream(fullStatString);
                         string statField;
-                        //vector<string> vectorOfStatFields;
+
                         while (stringStatStream >> statField) {
                             vectorOfStatFields.push_back(statField);
                         }

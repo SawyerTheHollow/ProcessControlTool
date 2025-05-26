@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         sortfilter.h
         signalwindow.h signalwindow.cpp signalwindow.ui
         columnvisibilitywindow.h columnvisibilitywindow.cpp columnvisibilitywindow.ui
+        cpuinfo.h cpuinfo.cpp
 
 
     )

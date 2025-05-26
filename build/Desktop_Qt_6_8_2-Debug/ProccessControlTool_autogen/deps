@@ -429,6 +429,8 @@ ProccessControlTool_autogen/timestamp: \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool_autogen/moc_predefs.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/columnvisibilitywindow.h \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/cpuinfo.cpp \
+	/home/sawyer/Документы/QtDiploma/ProccessControlTool/cpuinfo.h \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/main.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.cpp \
 	/home/sawyer/Документы/QtDiploma/ProccessControlTool/mainwindow.h \

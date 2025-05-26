@@ -97,6 +97,14 @@ build CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o: CXX_COMPI
   OBJECT_DIR = CMakeFiles/ProccessControlTool.dir
   OBJECT_FILE_DIR = CMakeFiles/ProccessControlTool.dir
 
+build CMakeFiles/ProccessControlTool.dir/cpuinfo.cpp.o: CXX_COMPILER__ProccessControlTool_unscanned_Debug /home/sawyer/Документы/QtDiploma/ProccessControlTool/cpuinfo.cpp || cmake_object_order_depends_target_ProccessControlTool
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/ProccessControlTool.dir/cpuinfo.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/sawyer/Документы/QtDiploma/ProccessControlTool/build/Desktop_Qt_6_8_2-Debug/ProccessControlTool_autogen/include -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtCore -isystem /home/sawyer/Qt/6.8.2/gcc_64/include -isystem /home/sawyer/Qt/6.8.2/gcc_64/mkspecs/linux-g++ -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtWidgets -isystem /home/sawyer/Qt/6.8.2/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/ProccessControlTool.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProccessControlTool.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ProccessControlTool
@@ -105,7 +113,7 @@ build CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o: CXX_COMPI
 #############################################
 # Link the executable ProccessControlTool
 
-build ProccessControlTool: CXX_EXECUTABLE_LINKER__ProccessControlTool_Debug CMakeFiles/ProccessControlTool.dir/ProccessControlTool_autogen/mocs_compilation.cpp.o CMakeFiles/ProccessControlTool.dir/main.cpp.o CMakeFiles/ProccessControlTool.dir/mainwindow.cpp.o CMakeFiles/ProccessControlTool.dir/processInfo.cpp.o CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o | /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2 /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2 || ProccessControlTool_autogen ProccessControlTool_autogen_timestamp_deps
+build ProccessControlTool: CXX_EXECUTABLE_LINKER__ProccessControlTool_Debug CMakeFiles/ProccessControlTool.dir/ProccessControlTool_autogen/mocs_compilation.cpp.o CMakeFiles/ProccessControlTool.dir/main.cpp.o CMakeFiles/ProccessControlTool.dir/mainwindow.cpp.o CMakeFiles/ProccessControlTool.dir/processInfo.cpp.o CMakeFiles/ProccessControlTool.dir/signalwindow.cpp.o CMakeFiles/ProccessControlTool.dir/columnvisibilitywindow.cpp.o CMakeFiles/ProccessControlTool.dir/cpuinfo.cpp.o | /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2 /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2 || ProccessControlTool_autogen ProccessControlTool_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/sawyer/Qt/6.8.2/gcc_64/lib:  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Widgets.so.6.8.2  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Gui.so.6.8.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /home/sawyer/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2  -Wl,-rpath-link,/home/sawyer/Qt/6.8.2/gcc_64/lib
   OBJECT_DIR = CMakeFiles/ProccessControlTool.dir

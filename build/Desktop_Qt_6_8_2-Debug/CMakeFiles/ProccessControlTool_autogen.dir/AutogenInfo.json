@@ -421,6 +421,12 @@
 			null
 		],
 		[
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/cpuinfo.h",
+			"MU",
+			"EWIEGA46WW/moc_cpuinfo.cpp",
+			null
+		],
+		[
 			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -506,6 +512,11 @@
 	[
 		[
 			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/columnvisibilitywindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/sawyer/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/QtDiploma/ProccessControlTool/cpuinfo.cpp",
 			"MU",
 			null
 		],

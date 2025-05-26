@@ -132,6 +132,8 @@ void columnvisibilitywindow::saveCheckBoxSettings()
     settings.setValue("env_startCheckBox", ui->env_startcheckBox->isChecked());
     settings.setValue("env_endCheckBox", ui->env_endcheckBox->isChecked());
     settings.setValue("exit_codeCheckBox", ui->exit_codecheckBox->isChecked());
+    settings.setValue("%CPUCheckBox", ui->cpuUsagecheckBox->isChecked());
+
 }
 
 void columnvisibilitywindow::loadCheckBoxSettings()
@@ -246,6 +248,7 @@ void columnvisibilitywindow::loadCheckBoxSettings()
     ui->env_startcheckBox->setChecked(settings.value("env_startCheckBox").toBool());
     ui->env_endcheckBox->setChecked(settings.value("env_endCheckBox").toBool());
     ui->exit_codecheckBox->setChecked(settings.value("exit_codeCheckBox").toBool());
+    ui->cpuUsagecheckBox->setChecked(settings.value("%CPUCheckBox").toBool());
 }
 
 

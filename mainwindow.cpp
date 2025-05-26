@@ -1,8 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <vector>
-#include "processInfo.h"
-#include "signalwindow.h"
 #include <QRegularExpression>
 #include <QMessageBox>
 #include <QProcess>
@@ -10,10 +8,12 @@
 #include <QScrollBar>
 #include <QSettings>
 
+#include "processInfo.h"
+#include "signalwindow.h"
+#include "columnvisibilitywindow.h"
+#include "cpuinfo.h"
 
 #include <QDebug>
-#include "columnvisibilitywindow.h"
-
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
                                                    << "tpgid" << "flags" << "minflt" << "cminflt" << "majflt" << "cmajflt" << "utime" << "stime" << "cutime" << "cstime" << "priority" << "nice" << "num_threads"
                                                    << "itrealvalue" << "starttime" << "vsize" << "rss" << "rsslim" << "startcode" << "endcode" << "startstack" << "kstkesp" << "kstkeip" << "signal" << "blocked"
                                                    << "sigignore" << "sigcatch" << "wchan" << "nswap" << "cnswap" << "exit_signal" << "processor" << "rt_priority" << "policy" << "delayacct_blkio_ticks"
-                                                   << "guest_time" << "cguest_time" << "start_data" << "end_data" << "start_brk" << "arg_start" << "arg_end" << "env_start" << "env_end" << "exit_code");
+                                                   << "guest_time" << "cguest_time" << "start_data" << "end_data" << "start_brk" << "arg_start" << "arg_end" << "env_start" << "env_end" << "exit_code" << "%CPU");
 
     proxyModel->setSourceModel(model);
     ui->tableView->setModel(proxyModel);
@@ -50,6 +50,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->tableView->resizeColumnsToContents();
     loadColumnVisibility();
+
+
 }
 
 
@@ -64,10 +66,16 @@ void MainWindow::updateProcessList() {
     QModelIndex currentIndex = ui->tableView->currentIndex();
     QString currentIndexPid = currentIndex.sibling(currentIndex.row(), 0).data().toString();
 
+    static cpuInfo previousCpu;
+    cpuInfo cpu = cpuInfo::getCpuInfo();
+
 
     vector<processInfo> vectorOfProcesses = getVectorOfProcesses();
+    static vector<processInfo> previousVectorOfProcesses = vectorOfProcesses;
 
-    model->removeRows(0, model->rowCount()); // Очищаем модель перед обновлением
+    float deltaCpu = cpu.gettotal() - previousCpu.gettotal();
+
+    model->removeRows(0, model->rowCount());
 
     for (int i = 0; i < vectorOfProcesses.size(); i++) {
         QList<QStandardItem *> items;
@@ -183,6 +191,11 @@ void MainWindow::updateProcessList() {
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getenv_end())));
         items.append(new QStandardItem(QString::fromStdString(vectorOfProcesses[i].processInfo::getexit_code())));
 
+        float deltautime = stoi(vectorOfProcesses[i].getutime()) - stoi(previousVectorOfProcesses[i].getutime()) + stoi(vectorOfProcesses[i].getstime()) - stoi(previousVectorOfProcesses[i].getstime());
+       // qInfo() << vectorOfProcesses[i].getstime();
+        float cpuUsagePercent = deltautime / deltaCpu * 100;
+        items.append(new QStandardItem(QString::number(cpuUsagePercent, 'f', 2)));
+
         model->appendRow(items);
     }
     // Костыль для сохранения позиции скролла перед участком кода ниже
@@ -201,6 +214,9 @@ void MainWindow::updateProcessList() {
     // Восстановление позиции скролла
     ui->tableView->verticalScrollBar()->setValue(verticalScrollPos);
     ui->tableView->horizontalScrollBar()->setValue(horizontalScrollPos);
+
+    previousCpu = cpu;
+    previousVectorOfProcesses = vectorOfProcesses;
 }
 
 
@@ -381,5 +397,6 @@ void MainWindow::loadColumnVisibility()
     ui->tableView->setColumnHidden(106, !settings.value("env_startCheckBox").toBool());
     ui->tableView->setColumnHidden(107, !settings.value("env_endCheckBox").toBool());
     ui->tableView->setColumnHidden(108, !settings.value("exit_codeCheckBox").toBool());
+    ui->tableView->setColumnHidden(109, !settings.value("%CPUCheckBox").toBool());
 }
 

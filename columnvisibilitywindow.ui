@@ -650,12 +650,15 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="cpuUsagecheckBox">
          <property name="enabled">
-          <bool>false</bool>
+          <bool>true</bool>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Это процент загрузки процессом процессора. Этого показателя нет в каталоге /proc, он вычисляется в рамках этого приложения следующим образом: измеряется общее количество тиков процессора (user + nice + system + idle + iowait + irq + softirq + steal + guest + guest_nice) из файла /proc/stat и общее количество тиков процесса (utime + stime) из файла /proc/[Pid]/stat, во время которых он задействовал процессор, за определённый промежуток времени. Далее упомянутое суммарное количество тиков процесса делятся на суммарное количество тиков процессора и умножаются на 100.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
-          <string>запланировано</string>
+          <string>%CPU</string>
          </property>
         </widget>
        </item>
