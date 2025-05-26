@@ -980,117 +980,117 @@ vector<processInfo> getVectorOfProcesses(){
 
                     // Извлекаем NSsid процесса
                     else if (line.find("NSsid:") == 0) {
-                        process.setNSsid(line.substr(6));
+                        process.setNSsid(line.substr(7));
                     }
 
                     // Извлекаем Kthread процесса
                     else if (line.find("Kthread:") == 0) {
-                        process.setKthread(line.substr(8));
+                        process.setKthread(line.substr(9));
                     }
 
                     // Извлекаем VmPeak процесса
                     else if (line.find("VmPeak:") == 0) {
-                        process.setVmPeak(line.substr(7));
+                        process.setVmPeak(line.substr(8));
                     }
 
                     // Извлекаем VmSize процесса
                     else if (line.find("VmSize:") == 0) {
-                        process.setVmSize(line.substr(7));
+                        process.setVmSize(line.substr(8));
                     }
 
                     // Извлекаем VmLck процесса
                     else if (line.find("VmLck:") == 0) {
-                        process.setVmLck(line.substr(6));
+                        process.setVmLck(line.substr(7));
                     }
 
                     // Извлекаем VmPin процесса
                     else if (line.find("VmPin:") == 0) {
-                        process.setVmPin(line.substr(6));
+                        process.setVmPin(line.substr(7));
                     }
 
                     // Извлекаем VmHWM процесса
                     else if (line.find("VmHWM:") == 0) {
-                        process.setVmHWM(line.substr(6));
+                        process.setVmHWM(line.substr(7));
                     }
 
                     // Извлекаем VmRSS процесса
                     else if (line.find("VmRSS:") == 0) {
-                        process.setVmRSS(line.substr(6));
+                        process.setVmRSS(line.substr(7));
                     }
 
                     // Извлекаем RssAnon процесса
                     else if (line.find("RssAnon:") == 0) {
-                        process.setRssAnon(line.substr(8));
+                        process.setRssAnon(line.substr(9));
                     }
 
                     // Извлекаем RssFile процесса
                     else if (line.find("RssFile:") == 0) {
-                        process.setRssFile(line.substr(8));
+                        process.setRssFile(line.substr(9));
                     }
 
                     // Извлекаем RssShmem процесса
                     else if (line.find("RssShmem:") == 0) {
-                        process.setRssShmem(line.substr(9));
+                        process.setRssShmem(line.substr(10));
                     }
 
                     // Извлекаем VmData процесса
                     else if (line.find("VmData:") == 0) {
-                        process.setVmData(line.substr(7));
+                        process.setVmData(line.substr(8));
                     }
 
                     // Извлекаем VmStk процесса
                     else if (line.find("VmStk:") == 0) {
-                        process.setVmStk(line.substr(6));
+                        process.setVmStk(line.substr(7));
                     }
 
                     // Извлекаем VmExe процесса
                     else if (line.find("VmExe:") == 0) {
-                        process.setVmExe(line.substr(6));
+                        process.setVmExe(line.substr(7));
                     }
 
                     // Извлекаем VmLib процесса
                     else if (line.find("VmLib:") == 0) {
-                        process.setVmLib(line.substr(6));
+                        process.setVmLib(line.substr(7));
                     }
 
                     // Извлекаем VmPTE процесса
                     else if (line.find("VmPTE:") == 0) {
-                        process.setVmPTE(line.substr(6));
+                        process.setVmPTE(line.substr(7));
                     }
 
                     // Извлекаем VmSwap процесса
                     else if (line.find("VmSwap:") == 0) {
-                        process.setVmSwap(line.substr(7));
+                        process.setVmSwap(line.substr(8));
                     }
 
                     // Извлекаем HugetlbPages процесса
                     else if (line.find("HugetlbPages:") == 0) {
-                        process.setHugetlbPages(line.substr(13));
+                        process.setHugetlbPages(line.substr(14));
                     }
 
                     // Извлекаем CoreDumping процесса
                     else if (line.find("CoreDumping:") == 0) {
-                        process.setCoreDumping(line.substr(12));
+                        process.setCoreDumping(line.substr(13));
                     }
 
                     // Извлекаем THP_enabled процесса
                     else if (line.find("THP_enabled:") == 0) {
-                        process.setTHP_enabled(line.substr(12));
+                        process.setTHP_enabled(line.substr(13));
                     }
 
                     // Извлекаем untag_mask процесса
                     else if (line.find("untag_mask:") == 0) {
-                        process.setuntag_mask(line.substr(11));
+                        process.setuntag_mask(line.substr(12));
                     }
 
                     // Извлекаем Threads процесса
                     else if (line.find("Threads:") == 0) {
-                        process.setThreads(line.substr(8));
+                        process.setThreads(line.substr(9));
                     }
 
                     // Извлекаем SigQ процесса
                     else if (line.find("SigQ:") == 0) {
-                        process.setSigQ(line.substr(5));
+                        process.setSigQ(line.substr(6));
                     }
 
                     // Извлекаем SigPnd процесса
@@ -1100,112 +1100,112 @@ vector<processInfo> getVectorOfProcesses(){
 
                     // Извлекаем ShdPnd процесса
                     else if (line.find("ShdPnd:") == 0) {
-                        process.setShdPnd(line.substr(7));
+                        process.setShdPnd(line.substr(8));
                     }
 
                     // Извлекаем SigBlk процесса
                     else if (line.find("SigBlk:") == 0) {
-                        process.setSigBlk(line.substr(7));
+                        process.setSigBlk(line.substr(8));
                     }
 
                     // Извлекаем SigIgn процесса
                     else if (line.find("SigIgn:") == 0) {
-                        process.setSigIgn(line.substr(7));
+                        process.setSigIgn(line.substr(8));
                     }
 
                     // Извлекаем SigCgt процесса
                     else if (line.find("SigCgt:") == 0) {
-                        process.setSigCgt(line.substr(7));
+                        process.setSigCgt(line.substr(8));
                     }
 
                     // Извлекаем CapInh процесса
                     else if (line.find("CapInh:") == 0) {
-                        process.setCapInh(line.substr(7));
+                        process.setCapInh(line.substr(8));
                     }
 
                     // Извлекаем CapPrm процесса
                     else if (line.find("CapPrm:") == 0) {
-                        process.setCapPrm(line.substr(7));
+                        process.setCapPrm(line.substr(8));
                     }
 
                     // Извлекаем CapEff процесса
                     else if (line.find("CapEff:") == 0) {
-                        process.setCapEff(line.substr(7));
+                        process.setCapEff(line.substr(8));
                     }
 
                     // Извлекаем CapBnd процесса
                     else if (line.find("CapBnd:") == 0) {
-                        process.setCapBnd(line.substr(7));
+                        process.setCapBnd(line.substr(8));
                     }
 
                     // Извлекаем CapAmb процесса
                     else if (line.find("CapAmb:") == 0) {
-                        process.setCapAmb(line.substr(7));
+                        process.setCapAmb(line.substr(8));
                     }
 
                     // Извлекаем NoNewPrivs процесса
                     else if (line.find("NoNewPrivs:") == 0) {
-                        process.setNoNewPrivs(line.substr(11));
+                        process.setNoNewPrivs(line.substr(12));
                     }
 
                     // Извлекаем Seccomp процесса
                     else if (line.find("Seccomp:") == 0) {
-                        process.setSeccomp(line.substr(8));
+                        process.setSeccomp(line.substr(9));
                     }
 
                     // Извлекаем Seccomp_filters процесса
                     else if (line.find("Seccomp_filters:") == 0) {
-                        process.setSeccomp_filters(line.substr(16));
+                        process.setSeccomp_filters(line.substr(17));
                     }
 
                     // Извлекаем Speculation_Store_Bypass процесса
                     else if (line.find("Speculation_Store_Bypass:") == 0) {
-                        process.setSpeculation_Store_Bypass(line.substr(25));
+                        process.setSpeculation_Store_Bypass(line.substr(26));
                     }
 
                     // Извлекаем SpeculationIndirectBranch процесса
                     else if (line.find("SpeculationIndirectBranch:") == 0) {
-                        process.setSpeculationIndirectBranch(line.substr(26));
+                        process.setSpeculationIndirectBranch(line.substr(27));
                     }
 
                     // Извлекаем Cpus_allowed процесса
                     else if (line.find("Cpus_allowed:") == 0) {
-                        process.setCpus_allowed(line.substr(13));
+                        process.setCpus_allowed(line.substr(14));
                     }
 
                     // Извлекаем Cpus_allowed_list процесса
                     else if (line.find("Cpus_allowed_list:") == 0) {
-                        process.setCpus_allowed_list(line.substr(18));
+                        process.setCpus_allowed_list(line.substr(19));
                     }
 
                     // Извлекаем Mems_allowed процесса
                     else if (line.find("Mems_allowed:") == 0) {
-                        process.setMems_allowed(line.substr(13));
+                        process.setMems_allowed(line.substr(14));
                     }
 
                     // Извлекаем Mems_allowed_list процесса
                     else if (line.find("Mems_allowed_list:") == 0) {
-                        process.setMems_allowed_list(line.substr(18));
+                        process.setMems_allowed_list(line.substr(19));
                     }
 
                     // Извлекаем voluntary_ctxt_switches процесса
                     else if (line.find("voluntary_ctxt_switches:") == 0) {
-                        process.setvoluntary_ctxt_switches(line.substr(24));
+                        process.setvoluntary_ctxt_switches(line.substr(25));
                     }
 
                     // Извлекаем nonvoluntary_ctxt_switches процесса
                     else if (line.find("nonvoluntary_ctxt_switches:") == 0) {
-                        process.setnonvoluntary_ctxt_switches(line.substr(27));
+                        process.setnonvoluntary_ctxt_switches(line.substr(28));
                     }
 
                     // Извлекаем x86_Thread_features процесса
                     else if (line.find("x86_Thread_features:") == 0) {
-                        process.setx86_Thread_features(line.substr(20));
+                        process.setx86_Thread_features(line.substr(21));
                     }
 
                     // Извлекаем x86_Thread_features_locked процесса
                     else if (line.find("x86_Thread_features_locked:") == 0) {
-                        process.setx86_Thread_features_locked(line.substr(27));
+                        process.setx86_Thread_features_locked(line.substr(28));
                     }
                     /* Извлечение информации из файла Stat
                      * Первые 2 поля этого файла пропущены из-за сложностей их парсинга
