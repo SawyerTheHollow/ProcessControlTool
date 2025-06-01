@@ -223,7 +223,6 @@ void MainWindow::updateProcessList() {
 
     previousCpu = cpu;
     previousVectorOfProcesses = vectorOfProcesses;
-
 }
 
 
@@ -235,15 +234,14 @@ void MainWindow::filterProcesses(const QString &text) {
 
 void MainWindow::terminateProcess() {
     QModelIndex currentIndex = ui->tableView->currentIndex();
+    QString currentIndexPid = currentIndex.sibling(currentIndex.row(), 0).data().toString();
 
     if (!currentIndex.isValid()) {
         QMessageBox::warning(this, "pid отсутствует", "Необходимо выбрать процесс из списка.");
         return;
     }
 
-    QString pid = proxyModel->data(currentIndex).toString();
-
-    if (QProcess::execute("kill", QStringList() << pid) != 0) {
+    if (QProcess::execute("kill", QStringList() << currentIndexPid) != 0) {
         QMessageBox::warning(this, "Ошибка", "Не удалось завершить процесс.");
         return;
     }
