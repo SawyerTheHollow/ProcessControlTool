@@ -16,6 +16,6 @@
 
 ### Окно выбора отправляемого сигнала
 <img src="https://github.com/user-attachments/assets/c78fba0a-f5d4-4f03-b88d-b9f74c670f81" align = "top">
-<img src="(https://github.com/user-attachments/assets/d94723bd-c6db-4a9d-961d-46d0a1d21ebd">
+<img src="https://github.com/user-attachments/assets/d94723bd-c6db-4a9d-961d-46d0a1d21ebd">
 
 
