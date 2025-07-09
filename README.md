@@ -7,5 +7,4 @@
 ![columnVisibilityWindow](https://github.com/user-attachments/assets/006942d6-3b2b-4b1d-81e1-317c3eee8dd6)
 ![Снимок экрана от 2025-06-01 11-48-22](https://github.com/user-attachments/assets/7d501ba9-f657-491a-818d-3ee2471b0574) ![Снимок экрана от 2025-06-01 13-38-10](https://github.com/user-attachments/assets/873f5251-92ba-4325-b125-db0df3d918be) ![Снимок экрана от 2025-06-01 13-37-28](https://github.com/user-attachments/assets/c6b404e1-f595-4df7-b983-11b01cd7bad4)
 
-![signalWindow](https://github.com/user-attachments/assets/c78fba0a-f5d4-4f03-b88d-b9f74c670f81)
-![comboBox](https://github.com/user-attachments/assets/d94723bd-c6db-4a9d-961d-46d0a1d21ebd)
+![signalWindow](https://github.com/user-attachments/assets/c78fba0a-f5d4-4f03-b88d-b9f74c670f81) ![comboBox](https://github.com/user-attachments/assets/d94723bd-c6db-4a9d-961d-46d0a1d21ebd)
