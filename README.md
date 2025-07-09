@@ -8,8 +8,9 @@
 У приложения существуют два дополнительных окна с функциональностью.
 
 ### Окно переключения видимости столбцов
-![columnVisibilityWindow](https://github.com/user-attachments/assets/006942d6-3b2b-4b1d-81e1-317c3eee8dd6)
 <div align = "middle">
+<img src="https://github.com/user-attachments/assets/006942d6-3b2b-4b1d-81e1-317c3eee8dd6" align = "top">
+
 <img src="https://github.com/user-attachments/assets/7d501ba9-f657-491a-818d-3ee2471b0574" width = "250"> 
 <img src="https://github.com/user-attachments/assets/873f5251-92ba-4325-b125-db0df3d918be" width = "250"> 
 <img src="https://github.com/user-attachments/assets/c6b404e1-f595-4df7-b983-11b01cd7bad4" width = "250">
